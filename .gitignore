@@ -47,8 +47,8 @@ Temporary Items
 .apdisk
 
 #Gothic Compiled Scripts
-.dat
-.bin
-.BIN
-.CSL
-.csl
+*.dat
+*.bin
+*.BIN
+*.CSL
+*.csl
