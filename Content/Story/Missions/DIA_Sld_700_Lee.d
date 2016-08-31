@@ -95,7 +95,7 @@ instance  Sld_700_Lee_Mitmachen (C_INFO)
 FUNC int  Sld_700_Lee_Mitmachen_Condition()
 {
 	if	(Npc_KnowsInfo(hero,Sld_700_Lee_Greet))
-	&&	(Npc_GetTrueGuild(hero) == GIL_NONE)
+	&&	((Npc_GetTrueGuild(hero) == GIL_NONE) || (Npc_GetTrueGuild(hero) == GIL_ORG) || (Npc_GetTrueGuild(hero) == GIL_SFB)) //+ inne gildie NO
 	&&	(oldHeroGuild == 0)
 	{
 		return 1;
@@ -128,8 +128,8 @@ instance  Sld_700_Lee_NowReady (C_INFO)
 
 FUNC int  Sld_700_Lee_NowReady_Condition()
 {
-	if	(Npc_GetTrueGuild(hero) == GIL_ORG)
-	&&	((Npc_KnowsInfo(hero,Sld_700_Lee_Mitmachen) || (hero.level >= 10)))
+	if	((Npc_GetTrueGuild(hero) == GIL_ORG) || (Npc_GetTrueGuild(hero) == GIL_SFB)) && (Npc_KnowsInfo(hero,Sld_700_Lee_Greet))
+	//&&	((Npc_KnowsInfo(hero,Sld_700_Lee_Mitmachen) || (hero.level >= 10))) zbêdne
 	{
 		return 1;
 	};
@@ -144,13 +144,13 @@ FUNC VOID  Sld_700_Lee_NowReady_Info()
 		AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_08_01"); //Twoje dokonania w Starej Kopalni dowodz¹, ¿e staæ ciê na wiele.
 		AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_08_02"); //Jestem sk³onny przyj¹æ ciê w poczet Najemników.
 	
-		if hero.level < 10
+		if (hero.level < 10)
 		{
 			AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_08_03"); //Ale nie jesteœ gotowy do s³u¿by w naszych szeregach. Musisz zdobyæ jeszcze trochê doœwiadczenia.
 	    	AI_StopProcessInfos	(self);
 			B_PrintGuildCondition(10);
 	    }
-	    else if hero.level >= 10
+	    else if (hero.level >= 10)
 	    {
 	    	AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_08_04"); //Dam ci szansê. Co ty na to?
 	    	Lee_SldPossible = TRUE;
@@ -158,17 +158,27 @@ FUNC VOID  Sld_700_Lee_NowReady_Info()
 	}
 	else
 	{	
-		if hero.level < 10
+		AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_MOD_01"); //Najemnikami zostaj¹ ci, którzy dobrze poznali ¿ycie w kolonii lub zrobili coœ, co udowadnia ich odwagê.
+		AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_MOD_02"); //Ty jeszcze nic takiego nie dokona³eœ. Czeka ciê d³uga droga.
+	};
+
+	//////////////////////////////////////////////
+	// Ta czêœæ skryptu zosta³a wycofana, poniewa¿
+	// mo¿liwoœæ zostania Najemnikiem w 1 rozdziale
+	// naruszy³aby balans.
+	//////////////////////////////////////////////
+	
+	/*	if (hero.level < 10)
 		{
 			AI_Output (self, other,"DIA_Lee_NowReady_08_01"); //Nadal nie jesteœ doœæ doœwiadczony. Musisz siê jeszcze wiele nauczyæ.
 			B_PrintGuildCondition(10);
 	    }
-	    else if hero.level >= 10
+	    else if (hero.level >= 10)
 	    {
 	    	AI_Output			(self, other,"Sld_700_Lee_BECOMESLD_Info_08_04"); //Dam ci szansê. Co ty na to?
 	    	Lee_SldPossible = TRUE;
 		};
-	};
+	};*/
 };
 
 /*------------------------------------------------------------------------

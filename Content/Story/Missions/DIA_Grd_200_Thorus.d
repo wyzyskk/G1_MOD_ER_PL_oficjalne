@@ -2302,23 +2302,26 @@ FUNC INT DIA_THORUS_FlintFindPath_Condition()
 
 FUNC VOID DIA_THORUS_FlintFindPath_Info()
 {
-    AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_01"); //Flint odnalaz³ œcie¿kê do Wolnej Kopalni.
+	AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_01"); //Przysy³a mnie niejaki Flint. Mam ci przekazaæ ¿e odnalaz³ œcie¿kê do Wolnej Kopalni.
+	if (Npc_GetTrueGuild(hero) == GIL_SFB) || (Npc_GetTrueGuild(hero) == GIL_NONE) || (Npc_GetTrueGuild(hero) == GIL_VLK)
+	{
     AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_02"); //Uda³o ci siê go znaleŸæ?
-    AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_03"); //Tak, zagubi³ siê w górach, przez które prowadzi œcie¿ka do Wolnej Kopalni.
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_04"); //Wreszcie bêdziemy mieli przewagê nad si³ami Nowego Obozu.
-    AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_05"); //Kiedy nast¹pi atak?
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_06"); //Nie tak prêdko, ch³opcze. Wszystko w swoim czasie.
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_07"); //Coœ czujê, ¿e nied³ugo bêdziemy mieli odpowiednio dobry powód, by u¿yæ naszej wiedzy.
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_08"); //A co do ciebie: wykona³eœ kawa³ œwietnej roboty.
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_09"); //Chcesz siê spotkaæ z Gomezem?
+    AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_03"); //Tak, trochê siê zagubi³, ale pomog³em mu uzupe³niæ brakuj¹ce czêœci uk³adanki.
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_04"); //To œwietnie. Czujê, ¿e informacje, które wkrótce przeka¿e mi Flint mog¹ nam siê bardzo przydaæ.
+    AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_05"); //Myœlisz o ataku na Woln¹ Kopalnie?
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_06"); //A o czym innym? Przecie¿ nie pójdziemy t¹ œcie¿k¹ do nich na herbatkê!
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_08"); //A co do ciebie: wykona³eœ kawa³ œwietnej roboty. Przyda nam siê ktoœ taki jak ty.
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_09"); //Mam rozumieæ, ¿e chcesz siê spotkaæ z Gomezem?
     AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_10"); //Jasne.
     AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_11"); //W takim razie Stra¿nicy przy bramie nie bêd¹ robiæ ci problemów.
 	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_12"); //Ach, i jeszcze jedno!
     AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_13"); //Tak?
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_14"); //Najemnicy z Kot³a mog¹ zacz¹æ podejrzewaæ, ¿e wyszpiegowaliœmy ich skrót.
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_15"); //IdŸ do Najemnika Okyla i powiedz mu, ¿e zabi³eœ Flinta.
-    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_16"); //Tylko pamiêtaj, ¿eby to zrobiæ, ZANIM wst¹pisz w szeregi Cieni.
-    B_LogEntry                     (CH1_FlintaPrzyjecie,"Thorus wie o œcie¿ce przez góry, a ja mogê ju¿ wejœæ na plac zamkowy.");
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_14"); //Jak w ogóle znalaz³eœ Flinta?
+	AI_Output (other, self ,"DIA_THORUS_FlintFindPath_15_15"); //Najemnik Okyl chcia³ ¿ebym go zabi³. Ja jednak postanowi³em siê z nim dogadaæ.
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_16"); //M¹drze post¹pi³eœ. Zanim pójdziesz do Gomeza wróæ do Okyla i powiedz mu, ¿e zabi³eœ Flinta.
+    AI_Output (self, other ,"DIA_THORUS_FlintFindPath_03_17"); //Tylko pamiêtaj, ¿eby to zrobiæ, ZANIM wst¹pisz w szeregi Cieni.
+	
+    B_LogEntry                     (CH1_FlintaPrzyjecie,"Zgodnie z poleceniem Flinta Thorus dowiedzia³ siê ode mnie o œcie¿ce przez góry. Otrzyma³em wstêp na plac zamkowy. Zanim jednak pójdê do Gomeza muszê wróciæ do Okyla i powiedzieæ mu, ¿e zabi³em Flinta.");
 
 	var C_NPC wache212; wache212 = Hlp_GetNpc(Grd_212_Torwache);
 	var C_NPC wache213; wache213 = Hlp_GetNpc(Grd_213_Torwache);
@@ -2334,6 +2337,59 @@ FUNC VOID DIA_THORUS_FlintFindPath_Info()
     Log_SetTopicStatus       (CH1_SayOkylFlintDead, LOG_RUNNING);
     B_LogEntry               (CH1_SayOkylFlintDead,"Zanim do³¹czê do Obozu, bêdê musia³ powiedzieæ Okylowi, ¿e Flint nie ¿yje. Wszystko po to, by st³umiæ podejrzenia Najemników.");
     AI_StopProcessInfos	(self);
+	}
+	else 
+	{
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_NOPE_19"); //Flint? Doprawdy? 
+	AI_Output (other, self ,"DIA_THORUS_FlintFindPath_HERO_20"); //Tak, natkn¹³em siê na niego w okolicach Wolnej Kopalni. Postanowi³em mu pomóc wróciæ do obozu. 
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_NOPE_21"); //I uda³o mu siê czegoœ dowiedzieæ?
+	AI_Output (other, self ,"DIA_THORUS_FlintFindPath_HERO_22"); //Znalaz³ ukryt¹ œcie¿kê do Kot³a. Gdyby nie ja, by³by martwy.
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_NOPE_23"); //Dziwi mnie twoja bezinteresownoœæ. Czego ode mnie oczekujesz? Chcesz siê spotkaæ z Gomezem? A mo¿e liczy siê tylko ruda.
+	
+	Info_ClearChoices (DIA_Thorus_FlintFindPath);
+	Info_AddChoice (DIA_THORUS_FlintFindPath,"Chcê siê spotkaæ z Gomezem.",DIA_THORUS_FlintFindPath_GOMEZ);
+	Info_AddChoice (DIA_THORUS_FlintFindPath,"Wystarczy mi ruda.",DIA_THORUS_FlintFindPath_ORE);
+	};
+};
+
+func void DIA_THORUS_FlintFindPath_GOMEZ ()
+{
+	AI_Output (other, self ,"DIA_THORUS_FlintFindPath_HERO_24"); //Chcê siê spotkaæ z Gomezem.
+	if (Npc_GetTrueGuild(hero) == GIL_NOV) || (Npc_GetTrueGuild(hero) == GIL_TPL) || (Npc_GetTrueGuild(hero) == GIL_GUR)
+	{
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_GOMEZ_PSIONIC_25"); //Nic ci po spotkaniu z Gomezem. Lepiej wracaj na bagna.
+	}
+	else if (Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_STT) || (Npc_GetTrueGuild(hero) == GIL_KDF) //Nie wiadomo co Psimogoth wykombinuje tym razem :))))
+	{
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_GOMEZ_WTF_26"); //Jeszcze nie zd¹¿y³eœ siê na niego napatrzeæ? Wracaj do swojej roboty.
+	}
+	else //no kurwa albo bandyta, albo ktoœ z nowego obozu - innej opcji nie ma
+	{
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_GOMEZ_BAN_27"); //Ktoœ twojego pokroju chcia³by siê zobaczyæ z Gomezem tylko po to, ¿eby go zabiæ. Nie pozwolê na to.
+	AI_StopProcessInfos (self);
+	Npc_SetPermAttitude (self, ATT_HOSTILE);
+    Npc_SetTarget (self, other);
+    AI_StartState (self, ZS_ATTACK, 1, "");
+	};
+};
+
+func void DIA_THORUS_FlintFindPath_ORE ()
+{
+	AI_Output (other, self ,"DIA_THORUS_FlintFindPath_HERO_28"); //Wystarczy mi ruda.
+	if (Npc_GetTrueGuild(hero) == GIL_NOV) || (Npc_GetTrueGuild(hero) == GIL_TPL) || (Npc_GetTrueGuild(hero) == GIL_GUR) || (Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_STT) || (Npc_GetTrueGuild(hero) == GIL_KDF) 
+	{
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_ORE_HH_29"); //Masz! Mo¿esz siê schlaæ do nieprzytomnoœci.
+	CreateInvItems (self, itminugget, 100);
+	B_GiveInvItems (self, hero, itminugget,100);
+	}
+	else 
+	{
+	AI_Output (self, other ,"DIA_THORUS_FlintFindPath_GOMEZ_BAN_27"); //Ktoœ twojego pokroju chcia³by siê zobaczyæ z Gomezem tylko po to, ¿eby go zabiæ. Nie pozwolê na to.
+	AI_StopProcessInfos (self);
+	Npc_SetPermAttitude (self, ATT_HOSTILE);
+    Npc_SetTarget (self, other);
+    AI_StartState (self, ZS_ATTACK, 1, "");
+	};
 };
 
 //========================================
