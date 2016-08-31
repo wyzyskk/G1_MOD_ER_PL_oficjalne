@@ -47,7 +47,21 @@ FUNC VOID DIA_Bula_Opcje_Info()
 	Info_AddChoice		(DIA_Bula_Opcje,"devmode -- game_end",DIA_EXTRO_AVI);
 	Info_AddChoice		(DIA_Bula_Opcje,"devmode -- finish josep's problem",DIA_Bula_DevMode20);
 	Info_AddChoice		(DIA_Bula_Opcje,"devmode -- unlock: dostawy alkoholu",DIA_Bula_DevMode21);
+	Info_AddChoice		(DIA_Bula_Opcje,"devmode -- guild to none",DIA_Bula_DevMode22);
+	Info_AddChoice		(DIA_Bula_Opcje,"devmode -- guild to org",DIA_Bula_DevMode23);
 	//Info_AddChoice		(DIA_Bula_Opcje,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			,DIA_Bula_Opcje2);
+};
+
+func void DIA_Bula_DevMode23 ()
+{
+	hero.guild = GIL_ORG;
+	Npc_SetTrueGuild	(hero,GIL_ORG );
+};
+
+func void DIA_Bula_DevMode22 ()
+{
+	hero.guild = GIL_NONE;
+	Npc_SetTrueGuild	(hero,GIL_NONE );
 };
 
 func void DIA_Bula_DevMode21 ()
