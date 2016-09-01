@@ -119,6 +119,7 @@ var int HeroNeedCollectMoreOre_VLK_560;//VLK_560
 var int HeroKnowAbelIsWinemaker;//VLK_560, Abel
 var int ArtegorIsDistracted;//Oczekuj¹cy (K³ykacz), Artegor
 var int JensIsVictimOfKereth;
+var int CanTellToGomezAboutSecretPath;//Thorus & Gomez (zadanie ze œcie¿k¹ do wolnej kopalni)
 
 //***Pomocnicze***
 //***Wld_GetDay***

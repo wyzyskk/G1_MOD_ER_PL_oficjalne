@@ -2331,6 +2331,9 @@ FUNC VOID DIA_THORUS_FlintFindPath_Info()
 	wache218.aivar[AIV_PASSGATE] = TRUE;
     AI_StopProcessInfos	(self);
 
+	// important
+	CanTellToGomezAboutSecretPath = TRUE;
+	
     MIS_SayOkylFlintDead = LOG_RUNNING;
 
     Log_CreateTopic          (CH1_SayOkylFlintDead, LOG_MISSION);
@@ -2349,6 +2352,10 @@ FUNC VOID DIA_THORUS_FlintFindPath_Info()
 	Info_ClearChoices (DIA_Thorus_FlintFindPath);
 	Info_AddChoice (DIA_THORUS_FlintFindPath,"Chcê siê spotkaæ z Gomezem.",DIA_THORUS_FlintFindPath_GOMEZ);
 	Info_AddChoice (DIA_THORUS_FlintFindPath,"Wystarczy mi ruda.",DIA_THORUS_FlintFindPath_ORE);
+	
+	MIS_FlintaPrzyjecie = LOG_FAILED;
+    Log_SetTopicStatus       (CH1_FlintaPrzyjecie, LOG_FAILED);
+    B_LogEntry                     (CH1_FlintaPrzyjecie,"Nie zyska³em sympatii Thorusa. Lepiej nie bêdê mu teraz wchodzi³ w drogê.");
 	};
 };
 

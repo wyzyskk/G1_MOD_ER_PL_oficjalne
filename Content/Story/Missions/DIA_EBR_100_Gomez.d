@@ -85,8 +85,41 @@ FUNC int DIA_Gomez_Hello_Condition()
 FUNC VOID DIA_Gomez_Hello_Info()
 {
 	AI_Output (other, self,"DIA_Gomez_Hello_15_00"); //Przychodzê zaoferowaæ swoje us³ugi.
+	if (Npc_GetTrueGuild(hero) == GIL_SFB) || (Npc_GetTrueGuild(hero) == GIL_NONE) || (Npc_GetTrueGuild(hero) == GIL_VLK)
+	{
 	AI_Output (self, other,"DIA_Gomez_Hello_11_01"); //A dlaczego myœlisz, ¿e potrzebujê twoich us³ug?
 	
+	Info_ClearChoices	(DIA_Gomez_Hello);	
+	//opcje podstawowe
+	Info_AddChoice		(DIA_Gomez_Hello,"Mam nadziejê, ¿e nie bêdê musia³ udowodniæ, ¿e potrafiê pos³ugiwaæ siê broni¹." 	,DIA_Gomez_Hello_KopfAb);
+	Info_AddChoice		(DIA_Gomez_Hello,"Bo wiêkszoœæ z twoich ludzi to leniwe ba³wany."									,DIA_Gomez_Hello_Spinner);
+	Info_AddChoice		(DIA_Gomez_Hello,"Przemierzy³em spor¹ czêœæ Kolonii i mam kontakty we wszystkich obozach."			,DIA_Gomez_Hello_Kontakte);
+	//test zaufania
+	if (Diego_BringList == LOG_SUCCESS)
+    {
+	Info_AddChoice		(DIA_Gomez_Hello,"Przeszed³em test zaufania."							,DIA_Gomez_Hello_ThorusSays);
+	};
+	//œcie¿ka do kopalni
+	if (CanTellToGomezAboutSecretPath == TRUE)
+    {
+	Info_AddChoice		(DIA_Gomez_Hello,"Pomog³em odnaleŸæ ukryt¹ œcie¿kê do Wolnej Kopalni!"	,DIA_Gomez_Hello_MineENter);
+	};
+	//kopacz
+	if (MIS_Kopacz == LOG_SUCCESS) && (MIS_TestOc == LOG_SUCCESS)
+    {
+	Info_AddChoice		(DIA_Gomez_Hello,"By³em Kopaczem. Przeszed³em d³ug¹ drogê."				,DIA_Gomez_Hello_Buddler);
+	};
+	//z³a gildia
+	}
+	else
+	{
+	AI_Output (self, other,"DIA_Gomez_Hello_MOD_02"); //Nie jesteœ kimœ, kto powinien siê tu znaleŸæ. 
+	AI_StopProcessInfos	(self);
+	Npc_SetPermAttitude	(self, ATT_HOSTILE);
+	Npc_SetTarget		(self,other);
+	AI_StartState		(self,ZS_ATTACK,1,"");
+	};
+	/***** STARY KOD ******
 	Info_ClearChoices	(DIA_Gomez_Hello);	
 	if (!Npc_KnowsInfo (hero, DIA_Torrez_NOWICJUSZ))
 	{
@@ -97,8 +130,8 @@ FUNC VOID DIA_Gomez_Hello_Info()
     {
 	Info_AddChoice		(DIA_Gomez_Hello,"Przeszed³em test zaufania."							,DIA_Gomez_Hello_ThorusSays);
 	};
-	if (MIS_Kopacz == LOG_SUCCESS)
-	&& (MIS_TestOc == LOG_SUCCESS)
+		//kopacz
+	if (MIS_Kopacz == LOG_SUCCESS) && (MIS_TestOc == LOG_SUCCESS)
     {
 	Info_AddChoice		(DIA_Gomez_Hello,"By³em Kopaczem. Przeszed³em d³ug¹ drogê."				,DIA_Gomez_Hello_Buddler);
 	};
@@ -106,7 +139,7 @@ FUNC VOID DIA_Gomez_Hello_Info()
     //{
 	//Info_AddChoice		(DIA_Gomez_Hello,"Wyda³em zdrajców i odzyska³em twoje dobra."							,DIA_Gomez_Hello_Golds);
 	//};
-	if (Npc_KnowsInfo(hero,DIA_THORUS_FlintFindPath))
+	if (CanTellToGomezAboutSecretPath == TRUE)
     {
 	Info_AddChoice		(DIA_Gomez_Hello,"Pomog³em odnaleŸæ ukryt¹ œcie¿kê do Wolnej Kopalni!"							,DIA_Gomez_Hello_MineENter);
 	};
@@ -114,18 +147,20 @@ FUNC VOID DIA_Gomez_Hello_Info()
 	else
 	{
 	//Info_AddChoice		(DIA_Gomez_Hello,"Mam aprobatê Magów Ognia. Chcê byæ Nowicjuszem Ognia."							,DIA_Gomez_Hello_Firenovize);
-	};
+	};*/
 };
+
+//NIEAKTUALNE
 func void DIA_Gomez_Hello_Firenovize () 
 {
 	AI_Output (other, self,"DIA_Gomez_Hello_Firenovize_15_00"); //Mam aprobatê Magów Ognia. Chcê byæ Nowicjuszem Ognia.
 	AI_Output (self, other,"DIA_Gomez_Hello_Firenovize_11_01"); //Aprobatê Magów Ognia... Ha!
 	AI_Output (self, other,"DIA_Gomez_Hello_Firenovize_11_02"); //Magowie staj¹ siê coraz bardziej bezczelni i samowolni. Wspó³praca z Nowym Obozem. Te¿ mi coœ.
 	AI_Output (self, other,"DIA_Gomez_Hello_Firenovize_11_03"); //Marnujesz czas na Magów, ale to twój wybór. No dobrze. Przyjmê ciê w szeregi moich ludzi. 
-gomez_kontakte = gomez_kontakte + 3;
-hero_join_fn = true;
-B_LogEntry                     (CH1_FireNovize,"Gomez chyba nie przepada za Magami Ognia, ale przyj¹³ mnie bez wiêkszych problemów. Czas porozmawiaæ z Torrezem.");
-Info_ClearChoices	(DIA_Gomez_Hello);
+	gomez_kontakte = gomez_kontakte + 10;
+	hero_join_fn = true;
+	B_LogEntry                     (CH1_FireNovize,"Gomez chyba nie przepada za Magami Ognia, ale przyj¹³ mnie bez wiêkszych problemów. Czas porozmawiaæ z Torrezem.");
+	Info_ClearChoices	(DIA_Gomez_Hello);
 };
 
 func void DIA_Gomez_Hello_MineENter ()
@@ -135,7 +170,7 @@ func void DIA_Gomez_Hello_MineENter ()
 	AI_Output (self, other,"DIA_Gomez_Hello_MineENter_11_03"); //A wiêc to o tobie wszyscy mówi¹.
 	AI_Output (self, other,"DIA_Gomez_Hello_MineENter_11_04"); //Pos³uchaj: gdybym ciê teraz nie przyj¹³, by³bym g³upcem. Witaj wœród nas!
 	MIS_FlintaPrzyjecie = LOG_SUCCESS;
-	gomez_kontakte = gomez_kontakte + 3;
+	gomez_kontakte = gomez_kontakte + 10;
     Log_SetTopicStatus       (CH1_FlintaPrzyjecie, LOG_SUCCESS);
 	hero_join_fn = false;
     B_LogEntry                     (CH1_FlintaPrzyjecie,"Gomez by³ bardzo uradowany z moich dokonañ.");
@@ -157,7 +192,7 @@ func void DIA_Gomez_Hello_Buddler()
 	AI_Output (self, other,"DIA_Gomez_Hello_Buddler_11_02"); //Szanujê lojalnych ludzi. Zazwyczaj tego nie robiê, ale dostaniesz swoj¹ szansê.
 	B_GiveXP (200);
 	hero_join_fn = false;
-	gomez_kontakte = gomez_kontakte + 4;
+	gomez_kontakte = gomez_kontakte + 10;
 	Log_SetTopicStatus	(CH1_AwansCien,	LOG_SUCCESS);
 	B_LogEntry			(CH1_AwansCien,	"Stary Obóz bêdzie od dziœ moim domem. Uda³o mi siê awansowaæ na Cienia. Nie muszê ju¿ harowaæ w kopalni i us³ugiwaæ Stra¿nikom.");
 	MIS_AwansCien = LOG_SUCCESS;
@@ -170,9 +205,10 @@ func void DIA_Gomez_Hello_Golds()
 	AI_Output (self, other,"DIA_Gomez_Hello_Buddler_11_01"); //Ceniê sobie lojalnoœæ i przebieg³oœæ. Opowiedz mi jeszcze o swoich kontaktach w innych obozach.
 	B_GiveXP (200);
 	MIS_KosztemQuentina = LOG_SUCCESS;
-hero_join_fn = false;
+	hero_join_fn = false;
     Log_SetTopicStatus       (CH1_KosztemQuentina, LOG_SUCCESS);
     B_LogEntry                     (CH1_KosztemQuentina,"Gomez niezmiernie siê ucieszy³ z mojej postawy. Cz³onkostwo w Starym Obozie mam pewne. Wystarczy, ¿e wspomnê o moich kontaktach w innych obozach.");
+	gomez_kontakte = gomez_kontakte + 10;
 };
 
 func void DIA_Gomez_Hello_Kontakte()
@@ -303,8 +339,8 @@ instance DIA_Gomez_Dabei (C_INFO)
 
 FUNC int DIA_Gomez_Dabei_Condition()
 {
-	if	(gomez_kontakte >= 3)
-	&&	((Npc_GetTrueGuild(hero) == GIL_NONE) || (Npc_GetTrueGuild(hero) == GIL_vlk) || (Npc_KnowsInfo(hero,DIA_THORUS_FlintFindPath)))
+	if	(gomez_kontakte >= 4)
+	&&	((Npc_GetTrueGuild(hero) == GIL_NONE) || (Npc_GetTrueGuild(hero) == GIL_VLK) || (CanTellToGomezAboutSecretPath == TRUE))
 	{
 		return 1;
 	};
