@@ -79,6 +79,7 @@ FUNC VOID  DIA_Fortuno_GetGeschenk_Info()
 	AI_Output (other, self,"DIA_Fortuno_GetGeschenk_15_00"); //Co to za prezent?
 	AI_Output (self, other,"DIA_Fortuno_GetGeschenk_05_01"); //To Mrok Pó³nocy - dobry towar!
 	AI_Output (self, other,"DIA_Fortuno_GetGeschenk_05_02"); //Mo¿esz do mnie przychodziæ codziennie po now¹ porcjê, ale gdybyœ chcia³ dostaæ wiêcej ni¿ przewiduje dzienna racja, bêdziesz musia³ zap³aciæ.
+	AI_Output (self, other,"DIA_Fortuno_GetGeschenk_MOD_00"); //Aha, cz³onkowie innych obozów nie dostaj¹ prezentów.  
 	AI_Output (self, other,"DIA_Fortuno_GetGeschenk_05_03"); //Gdybyœ znalaz³ jakieœ zio³a lub owoce mo¿esz je przynieœæ do mnie. Chêtnie je od ciebie odkupiê.
 
 	CreateInvItems(self, itmijoint_2, 3);
@@ -105,7 +106,7 @@ instance  DIA_Fortuno_DailyRation (C_INFO)
 
 FUNC int  DIA_Fortuno_DailyRation_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Fortuno_GetGeschenk)) && (Kapitel < 4)
+	if (Npc_KnowsInfo(hero,DIA_Fortuno_GetGeschenk)) && (Kapitel < 4) && ( (Npc_GetTrueGuild(hero) == GIL_NONE) || (Npc_GetTrueGuild(hero) == GIL_NOV) ||(Npc_GetTrueGuild(hero) == GIL_TPL) || (Npc_GetTrueGuild(hero) == GIL_GUR)  )
 	{
 		return 1;
 	};
