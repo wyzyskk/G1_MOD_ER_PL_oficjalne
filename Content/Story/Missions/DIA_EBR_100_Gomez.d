@@ -218,11 +218,23 @@ func void DIA_Gomez_Hello_Kontakte()
 	AI_Output (self, other,"DIA_Gomez_Hello_Kontakte_11_01"); //No! To siê mo¿e przydaæ. Z kim konkretnie utrzymujesz kontakty?
 	Info_ClearChoices	(DIA_Gomez_Hello);
 	Info_AddChoice		(DIA_Gomez_Hello,"To ju¿ wszyscy, z tych wa¿niejszych." ,DIA_Gomez_Hello_Kontakte_ThatsAll);
+	if (Npc_KnowsInfo (hero, DIA_Mazin_Mazin2)) || (Cipher_Trade) || (Npc_KnowsInfo (hero, DIA_Huan_OLD_ARMOR_DEAL)) || (MIS_TopielcewChacie == LOG_SUCCESS) || (Npc_KnowsInfo (hero, DIA_Wolf_Hello)) || (Npc_KnowsInfo (hero, DIA_Butch_KolegaCHuj)) || (MIS_MapForRatford == LOG_SUCCESS) || (Npc_KnowsInfo (hero, DIA_Ghoram_HELLO1))
+	{
 	Info_AddChoice		(DIA_Gomez_Hello,"Z kilkoma ³obuzami z Nowego Obozu."	,DIA_Gomez_Hello_Kontakte_NLHehler);
+	};
+	if (Npc_KnowsInfo (hero, ORG_801_Lares_YouHere))
+	{
 	Info_AddChoice		(DIA_Gomez_Hello,"Z Laresem."	,DIA_Gomez_Hello_Kontakte_Lares);
+	};
 	//Info_AddChoice		(DIA_Gomez_Hello,"Zu Lee."	,DIA_Gomez_Hello_Kontakte_Lee);
+	if ( (MIS_PolowanieZBaalem == LOG_SUCCESS) || (Npc_KnowsInfo (hero, DIA_BaalOrun_FirstTalk)) || (Npc_KnowsInfo (hero, DIA_BaalCadar_SleepSpell))  || (BaalTondral_GetNewGuy == LOG_SUCCESS) || (Npc_KnowsInfo (hero, DIA_BaalNamib_FirstTalk)) ) 
+	{
 	Info_AddChoice		(DIA_Gomez_Hello,"Z kilkoma Baalami w Obozie Bractwa."	,DIA_Gomez_Hello_Kontakte_Baals);
+	};
+	if (Kalom_TalkedTo)
+	{
 	Info_AddChoice		(DIA_Gomez_Hello,"Z Cor Kalomem"	,DIA_Gomez_Hello_Kontakte_Kalom);
+	};
 	hero_join_fn = false;
 	if (gomez_kontakte < 3)
 	{
