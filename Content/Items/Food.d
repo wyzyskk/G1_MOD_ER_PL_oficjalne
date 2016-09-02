@@ -33,7 +33,7 @@ const int	Value_Grabmoos		=	10;		const int	HP_Grabmoos			=	20;
 
 
 //przeniesione do Plants.d
- //sk³adnik du¿ej mikstury szybkoœæi
+ //sk³adnik du¿ej mikstury szybkoœci
 
 
 const int	Value_Höllenpilz	=	 3;		const int	HP_Höllenpilz		=	 6;

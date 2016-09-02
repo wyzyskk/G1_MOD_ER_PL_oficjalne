@@ -21,9 +21,9 @@ ItFo_Plants_PapkaZziela
 *****************************************************/
 
 //DODATKI ALCHEMICZNE
-const int	Value_Seraphis		=	7;		const int	HP_Seraphis			=	14;
-const int	Value_Nachtschatten	=	11;		const int	HP_Nachtschatten	=	22;
-const int	Value_Mondschatten	=	20;		const int	HP_Mondschatten		=	24;
+const int	Value_Seraphis		=	3;		const int	HP_Seraphis			=	14;
+const int	Value_Nachtschatten	=	7;		const int	HP_Nachtschatten	=	22;
+const int	Value_Mondschatten	=	13;		const int	HP_Mondschatten		=	24;
 
 //MIKSTURY TRWA£E - SK£ADNIKI BAZOWE 
 const int	Value_Flammendorn	=	100;	const int	HP_Flammendorn		=	0; //sk³adnik mikstury si³y
@@ -31,7 +31,7 @@ const int	Value_Eichenblatt	=	100;	const int	HP_Eichenblatt		=	0; //sk³adnik mik
 const int	Value_Rabenkraut	=	100;	const int	Mana_Rabenkraut		=	0; //sk³adnik mikstury ¿ycia
 const int	Value_Drachenwurzel	=	100;	const int	Mana_Drachenwurzel	=	0; //sk³adnik mikstury many
 
-const int	Value_Orkblatt		=	15;		const int	HP_Orkblatt			=	26;
+const int	Value_Orkblatt		=	10;		const int	HP_Orkblatt			=	26;
 
 //POSPOLITE SK£ADNIKI
 const int	Value_Dunkelkraut	=	15;		const int	Mana_Dunkelkraut	=	20;
