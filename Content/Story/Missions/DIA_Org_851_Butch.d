@@ -119,6 +119,10 @@ FUNC VOID DIA_Butch_KolegaCHuj_Info()
     AI_StartState (self,ZS_ATTACK,1,"");
 };
 
+const int Butch_TakeQuest	=	1;
+const int Butch_RefuseQuest	=	2;
+var int Butch_Choice;
+
 //========================================
 //-----------------> CzasZaplaty
 //========================================
@@ -155,27 +159,34 @@ FUNC VOID DIA_Butch_CzasZaplaty_Info()
 
 FUNC VOID DIA_Butch_CzasZaplaty_DAJESZ()
 {
-    AI_Output (other, self ,"DIA_Butch_CzasZaplaty_DAJESZ_15_01"); //Nie mam czasu na zabawy. Dawaj rudê, bo po¿a³ujesz.
-    AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DAJESZ_03_02"); //Ha ha ha!
-    //CreateInvItems (self, ItMiNugget, 1500);
-	zastraszenie_isidro = false;
+    AI_Output (other, self ,"DIA_Butch_CzasZaplaty_DAJESZ_15_01"); //Nie mam czasu na zabawy. Dawaj rudê, bo po¿a³ujesz!
+    AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DAJESZ_03_02"); //Ha ha ha! Zobaczymy!
+
+	Info_ClearChoices		(DIA_Butch_CzasZaplaty);
+	
     AI_StopProcessInfos	(self);
     Npc_SetTarget (self, other);
     AI_StartState (self, ZS_ATTACK, 1, "");
+	
+	Butch_Choice = Butch_RefuseQuest;
 };
 
 FUNC VOID DIA_Butch_CzasZaplaty_DOGADAJMY_SIE()
 {
     AI_Output (other, self ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_15_01"); //Czego chcesz za rudê? Dogadajmy siê. Byle szybko.
-    AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_03_02"); //Nie lubisz siê targowaæ, co? No dobra. 
+    AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_03_02"); //Nie lubisz siê targowaæ, co? No dobra... 
     AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_03_03"); //Wkurzy³ mnie ostatnio jeden goœæ z Bractwa. Wo³aj¹ na niego Isidro.
     AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_03_04"); //Typ sprzeda³ mi jakieœ beznadziejne ziele. Skasuj goœcia.
     AI_Output (self, other ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_03_05"); //Mam go wiêcej nie widzieæ.
     AI_Output (other, self ,"DIA_Butch_CzasZaplaty_DOGADAJMY_SIE_15_06"); //Spróbujê coœ wymyœliæ.
+	
+	Info_ClearChoices		(DIA_Butch_CzasZaplaty);
+	
+	AI_StopProcessInfos	(self);
+	
     B_LogEntry                     (CH1_DostawaLowcow,"Je¿eli chce, aby Butch odda³ d³ug po dobroci, muszê pozbyæ siê Baala Isidro z Nowego Obozu.");
-	zastraszenie_isidro = true;
-    Info_ClearChoices		(DIA_Butch_CzasZaplaty);
-    AI_StopProcessInfos	(self);
+	
+	Butch_Choice = Butch_TakeQuest;
 };
 
 //========================================
@@ -194,7 +205,7 @@ INSTANCE DIA_Butch_ISIDRO (C_INFO)
 
 FUNC INT DIA_Butch_ISIDRO_Condition()
 {
-    if (Npc_KnowsInfo (hero, DIA_BaalIsidro_NAPASC))
+    if (Npc_KnowsInfo (hero, DIA_BaalIsidro_NAPASC)) && (Butch_Choice == Butch_TakeQuest)
     {
     return TRUE;
     };
@@ -206,11 +217,13 @@ FUNC VOID DIA_Butch_ISIDRO_Info()
     AI_Output (other, self ,"DIA_Butch_ISIDRO_15_01"); //Pozby³em siê Isidro.
     AI_Output (self, other ,"DIA_Butch_ISIDRO_03_02"); //Dobra robota. Masz tê rudê. Ciê¿ko mi siê z ni¹ rozstaæ, ale có¿.
     AI_Output (self, other ,"DIA_Butch_ISIDRO_03_03"); //Aha! Jak us³yszê, ¿e mój d³ug nie jest sp³acony... to siê jeszcze spotkamy. 
-    B_LogEntry                     (CH1_DostawaLowcow,"Dosta³em zap³atê za pancerz od Butcha. Muszê j¹ zanieœæ do Wilka. ");
+	
+    B_LogEntry                     (CH1_DostawaLowcow,"Dosta³em zap³atê za pancerz od Butcha. Powinienem ju¿ wróciæ do Wilka.");
 
     B_GiveXP (100);
     CreateInvItems (self, ItMiNugget, 1500);
     B_GiveInvItems (self, other, ItMiNugget, 1500);
+	
     AI_StopProcessInfos	(self);
 };
 
@@ -232,6 +245,7 @@ FUNC INT DIA_Butch_BUSTER_LOSE_Condition()
 {
     if (Npc_KnowsInfo (hero, DIA_Butch_CzasZaplaty))
     && (self.aivar[AIV_WASDEFEATEDBYSC]==TRUE)
+	&& (Butch_Choice == Butch_RefuseQuest)
     {
     return TRUE;
     };
@@ -242,9 +256,13 @@ FUNC VOID DIA_Butch_BUSTER_LOSE_Info()
 {
     AI_Output (self, other ,"DIA_Butch_BUSTER_LOSE_03_01"); //Grabisz sobie, sukinsynu!
     AI_Output (other, self ,"DIA_Butch_BUSTER_LOSE_15_02"); //Skoñcz tê paplaninê i dawaj rudê.
+	
+	B_GiveXP (100);
     CreateInvItems (self, ItMiNugget, 1500);
     B_GiveInvItems (self, other, ItMiNugget, 1500);
-	B_LogEntry                     (CH1_DostawaLowcow,"Si³¹ odzyska³em rudê od Butcha.");
+	
+	B_LogEntry                     (CH1_DostawaLowcow,"Si³¹ odzyska³em rudê od Butcha. Powinienem ju¿ wróciæ do Wilka.");
+	
 	AI_StopProcessInfos	(self);
 };
 

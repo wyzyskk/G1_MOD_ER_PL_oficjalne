@@ -699,7 +699,7 @@ instance  KDW_604_Cronos_SELLSTUFF (C_INFO)
 FUNC int  KDW_604_Cronos_SELLSTUFF_Condition()
 {	
 	if	(Npc_KnowsInfo (hero,KDW_604_Cronos_GREET))
-	&&	((CorAngar_SendToNC == FALSE) || Npc_KnowsInfo(hero, Info_Cronos_SLEEPER))
+	//&&	((CorAngar_SendToNC == FALSE) || Npc_KnowsInfo(hero, Info_Cronos_SLEEPER))
 	{
 		return TRUE;
 	};
