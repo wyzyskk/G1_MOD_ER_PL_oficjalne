@@ -258,6 +258,86 @@ var string pri4m;
 	B_Say (self, other, "$NOLEARNOVERMAX");
 	};
 	};
+	
+	
+	//wyliczanie kosztów atrybutu SI£A
+	if (typ.attribute[ATR_STRENGTH] >= 90)
+	{
+	koszt_punktu_str = 5;
+	public_str_cost = 5;
+	}
+	else if (typ.attribute[ATR_STRENGTH] >= 75)
+	{
+	koszt_punktu_str = 4;
+	public_str_cost = 4;
+	}
+	else if (typ.attribute[ATR_STRENGTH] >= 50)
+	{
+	koszt_punktu_str = 3;
+	public_str_cost = 3;
+	}
+	else if (typ.attribute[ATR_STRENGTH] >= 25)
+	{
+	koszt_punktu_str = 2;
+	public_str_cost = 2;
+	}
+	else if (typ.attribute[ATR_STRENGTH] < 25)
+	{
+	koszt_punktu_str = 1;
+	public_str_cost = 1;
+	};
+	//wyliczanie kosztów atrybutu ZRÊCZNOŒÆ
+	if (typ.attribute[ATR_DEXTERITY] >= 90)
+	{
+	koszt_punktu_dex = 5;
+	public_dex_cost = 5;
+	}
+	else if (typ.attribute[ATR_DEXTERITY] >= 75)
+	{
+	koszt_punktu_dex = 4;
+	public_dex_cost = 4;
+	}
+	else if (typ.attribute[ATR_DEXTERITY] >= 50)
+	{
+	koszt_punktu_dex = 3;
+	public_dex_cost = 3;
+	}
+	else if (typ.attribute[ATR_DEXTERITY] >= 25)
+	{
+	koszt_punktu_dex = 2;
+	public_dex_cost = 2;
+	}
+	else if (typ.attribute[ATR_DEXTERITY] < 25)
+	{
+	koszt_punktu_dex = 1;
+	public_dex_cost = 1;
+	};
+	//wyliczanie kosztów atrybutu MANA MAX
+	if (typ.attribute[ATR_MANA_MAX] >= 90)
+	{
+	koszt_punktu_mana = 3;
+	public_man_cost = 3;
+	}
+	else if (typ.attribute[ATR_MANA_MAX] >= 75)
+	{
+	koszt_punktu_mana = 2;
+	public_man_cost = 2;
+	}
+	else if (typ.attribute[ATR_MANA_MAX] >= 50)
+	{
+	koszt_punktu_mana = 2;
+	public_man_cost = 2;
+	}
+	else if (typ.attribute[ATR_MANA_MAX] >= 25)
+	{
+	koszt_punktu_mana = 1;
+	public_man_cost = 1;
+	}
+	else if (typ.attribute[ATR_MANA_MAX] < 25)
+	{
+	koszt_punktu_mana = 1;
+	public_man_cost = 1;
+	};
 	/*
 	if (!(typ.lp < AtrPlus*2))
 	{

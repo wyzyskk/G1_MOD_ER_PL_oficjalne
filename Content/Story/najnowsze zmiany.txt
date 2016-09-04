@@ -3,3 +3,4 @@
 - ¿eby pochwaliæ siê kontaktami Gomezowi trzeba je faktycznie mieæ
 - spadek cen najpopularniejszych zió³ 
 - Fortuno nie daje prezentów jeœli do³¹czymy do innego obozu ni¿ bractwo
+- naprawiony b³¹d z podan¹ z³¹ iloœci¹ PN za naukê po przeskoczeniu progu
