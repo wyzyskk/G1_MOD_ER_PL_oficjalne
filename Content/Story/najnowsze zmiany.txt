@@ -4,3 +4,5 @@
 - spadek cen najpopularniejszych zió³ 
 - Fortuno nie daje prezentów jeœli do³¹czymy do innego obozu ni¿ bractwo
 - naprawiony b³¹d z podan¹ z³¹ iloœci¹ PN za naukê po przeskoczeniu progu
+- naprawa b³êdu który niektórym graczom mo¿e uniemo¿liwiæ zostanie najemnikiem w drugim rozdziale
+- zablokowano mo¿liwoœæ zostania najemnikiem w pierwszym rozdziale
