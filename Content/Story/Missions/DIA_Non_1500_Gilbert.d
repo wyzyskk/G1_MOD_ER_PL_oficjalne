@@ -80,74 +80,14 @@ FUNC VOID  DIA_Gilbert_Hallo_Info()
 	AI_Output (self, other,"DIA_Gilbert_Hallo_04_02"); //Teraz pewnie nikt ju¿ o mnie nie pamiêta, ale ja siê st¹d nie ruszam. Jak na mój gust - w Starym Obozie wci¹¿ jest za du¿o têpych osi³ków.
 };
 
-
-//========================================
-//-----------------> GoToTondral
-//========================================
-
-INSTANCE DIA_Gilbert_GoToTondral (C_INFO)
-{
-   npc          = Non_1500_Gilbert;
-   nr           = 1;
-   condition    = DIA_Gilbert_GoToTondral_Condition;
-   information  = DIA_Gilbert_GoToTondral_Info;
-   permanent	= FALSE;
-   description	= "Mo¿e chcesz pójœæ ze mn¹ do Bractwa?";
-};
-
-FUNC INT DIA_Gilbert_GoToTondral_Condition()
-{
-    if (BaalTondral_GetNewGuy == LOG_RUNNING)
-    && (Npc_KnowsInfo (hero, DIA_Gilbert_Hallo))
-    {
-    return TRUE;
-    };
-};
-
-
-FUNC VOID DIA_Gilbert_GoToTondral_Info()
-{
-    AI_Output (other, self ,"DIA_Gilbert_GoToTondral_15_01"); //Mo¿e chcesz pójœæ ze mn¹ do Bractwa?
-    AI_Output (self, other ,"DIA_Gilbert_GoToTondral_03_02"); //Czemu nie? Chyba czas ju¿ coœ zmieniæ w swoim ¿yciu.
-    AI_Output (self, other ,"DIA_Gilbert_GoToTondral_03_03"); //Rozumiem, ¿e mnie tam zaprowadzisz.
-    AI_Output (other, self ,"DIA_Gilbert_GoToTondral_15_04"); //Jasne. Dam ci znak, gdy bêdê gotowy.
-};
-
-//========================================
-//-----------------> HELLO2
-//========================================
-
-INSTANCE DIA_Gilbert_HELLO2 (C_INFO)
-{
-   npc          = Non_1500_Gilbert;
-   nr           = 2;
-   condition    = DIA_Gilbert_HELLO2_Condition;
-   information  = DIA_Gilbert_HELLO2_Info;
-   permanent	= FALSE;
-   description	= "Ruszajmy.";
-};
-
-FUNC INT DIA_Gilbert_HELLO2_Condition()
-{
-    if (Npc_KnowsInfo (hero, DIA_Gilbert_GoToTondral))
-    && (BaalTondral_GetNewGuy == LOG_RUNNING)
-    {
-    return TRUE;
-    };
-};
-
-
-FUNC VOID DIA_Gilbert_HELLO2_Info()
-{
-    AI_Output (other, self ,"DIA_Gilbert_HELLO2_15_01"); //Ruszajmy.
-    AI_Output (self, other ,"DIA_Gilbert_HELLO2_03_02"); //Dobrze. Tylko uwa¿aj na ska³y.
-    	self.flags = NPC_FLAG_IMMORTAL;
-self.aivar[AIV_PARTYMEMBER] = TRUE;
-    Npc_ExchangeRoutine (self, "FOLLOW");
-    B_LogEntry                     (CH1_RecruitDusty,"Postanowi³em, ¿e zaprowadzê Gilberta do Bractwa.");
-    AI_StopProcessInfos	(self);
-};
-
+///////////////////////////////////////////////////////////////////////////////////////////
+// __MOD DIALOGS
+//	////////  ////////
+//  //        //    //
+//  //////    //////
+//  //        //   //
+//  ///////// //    //
+///////////////////////////////////////////////////////////////////////////////////////////
 
 //========================================
 //-----------------> Kobieta
@@ -311,4 +251,77 @@ FUNC VOID DIA_Gilbert_TEACH_Info()
     AI_Output (self, other ,"DIA_Gilbert_TEACH_03_03"); //Pamiêtaj, ¿eby dok³adnie obserwowaæ drogê po której chcesz siê wspinaæ. Zwracaj uwagê na s³absze fragmenty ska³, które mog¹ odpaœæ.
     AI_Output (self, other ,"DIA_Gilbert_TEACH_03_04"); //Nie ka¿dy fragment skalny jest w stanie wytrzymaæ twój ciê¿ar. 
 	};		
+};
+
+/////////////////////////////////////////////////////////////
+// NIEAKTYWNE DIALOGI
+// BY£Y PO PROSTU Z£E
+/////////////////////////////////////////////////////////////
+
+//========================================
+//-----------------> GoToTondral
+//========================================
+
+INSTANCE DIA_Gilbert_GoToTondral (C_INFO)
+{
+   npc          = Non_1500_Gilbert;
+   nr           = 1;
+   condition    = DIA_Gilbert_GoToTondral_Condition;
+   information  = DIA_Gilbert_GoToTondral_Info;
+   permanent	= FALSE;
+   description	= "Mo¿e chcesz pójœæ ze mn¹ do Bractwa?";
+};
+
+FUNC INT DIA_Gilbert_GoToTondral_Condition()
+{
+    if (BaalTondral_GetNewGuy == LOG_RUNNING)
+    && (Npc_KnowsInfo (hero, DIA_Gilbert_Hallo))
+
+    {
+    return FALSE;
+    };
+};
+
+
+FUNC VOID DIA_Gilbert_GoToTondral_Info()
+{
+    AI_Output (other, self ,"DIA_Gilbert_GoToTondral_15_01"); //W Bractwie poszukuj¹ nowych wyznawców. Mo¿e chcesz pójœæ tam ze mn¹?
+    AI_Output (self, other ,"DIA_Gilbert_GoToTondral_03_02"); //Czemu nie? Chyba czas ju¿ coœ zmieniæ w swoim ¿yciu. Od lat twkiê w tej jaskini. 
+    AI_Output (self, other ,"DIA_Gilbert_GoToTondral_03_03"); //Rozumiem, ¿e mnie tam zaprowadzisz?
+    AI_Output (other, self ,"DIA_Gilbert_GoToTondral_15_04"); //Jasne. Dam ci znak, gdy bêdê gotowy.
+};
+
+//========================================
+//-----------------> HELLO2
+//========================================
+
+INSTANCE DIA_Gilbert_HELLO2 (C_INFO)
+{
+   npc          = Non_1500_Gilbert;
+   nr           = 2;
+   condition    = DIA_Gilbert_HELLO2_Condition;
+   information  = DIA_Gilbert_HELLO2_Info;
+   permanent	= FALSE;
+   description	= "Ruszajmy.";
+};
+
+FUNC INT DIA_Gilbert_HELLO2_Condition()
+{
+    if (Npc_KnowsInfo (hero, DIA_Gilbert_GoToTondral))
+    && (BaalTondral_GetNewGuy == LOG_RUNNING)
+    {
+    return FALSE;
+    };
+};
+
+
+FUNC VOID DIA_Gilbert_HELLO2_Info()
+{
+    AI_Output (other, self ,"DIA_Gilbert_HELLO2_15_01"); //Ruszajmy.
+    AI_Output (self, other ,"DIA_Gilbert_HELLO2_03_02"); //Dobrze. Tylko uwa¿aj na ska³y.
+    	self.flags = NPC_FLAG_IMMORTAL;
+self.aivar[AIV_PARTYMEMBER] = TRUE;
+    Npc_ExchangeRoutine (self, "FOLLOW");
+    B_LogEntry                     (CH1_RecruitDusty,"Postanowi³em, ¿e zaprowadzê Gilberta do Bractwa.");
+    AI_StopProcessInfos	(self);
 };

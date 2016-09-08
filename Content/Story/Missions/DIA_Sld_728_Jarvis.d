@@ -275,60 +275,14 @@ func void  Sld_728_Jarvis_AUFNAHMESOLDIER_Info()
 	B_LogEntry (GE_BecomeMercenary,"Powinienem porozmawiaæ z Lee. Mo¿e pozwoli mi do³¹czyæ do Najemników.");
 };
 
-//========================================
-//-----------------> WARN_FLINT
-//========================================
-
-INSTANCE DIA_Jarvis_WARN_FLINT (C_INFO)
-{
-   npc          = Sld_728_Jarvis;
-   nr           = 1;
-   condition    = DIA_Jarvis_WARN_FLINT_Condition;
-   information  = DIA_Jarvis_WARN_FLINT_Info;
-   permanent	= FALSE;
-   Important    = TRUE;
-};
-
-FUNC INT DIA_Jarvis_WARN_FLINT_Condition()
-{
-    if (Npc_KnowsInfo (hero, DIA_Flint_FollowMe))
-    && (STT_2046_Flint.aivar[AIV_PARTYMEMBER] == TRUE)
-    {
-    return TRUE;
-    };
-};
-
-
-FUNC VOID DIA_Jarvis_WARN_FLINT_Info()
-{
-    AI_Output (self, other ,"DIA_Jarvis_WARN_FLINT_03_01"); //Hej! A co to za goœæ?
-    AI_Output (self, other ,"DIA_Jarvis_WARN_FLINT_03_02"); //Gdzie go prowadzisz?
-
-    Info_ClearChoices		(DIA_Jarvis_WARN_FLINT);
-    Info_AddChoice		(DIA_Jarvis_WARN_FLINT, "To wyrzucony z kopalni Kret. Ma trafiæ do Ry¿owego Ksiêcia.", DIA_Jarvis_WARN_FLINT_KRET);
-    Info_AddChoice		(DIA_Jarvis_WARN_FLINT, "To zbieg z pól ry¿owych. Uda³o mi siê go z³apaæ.", DIA_Jarvis_WARN_FLINT_ZBIEG);
-};
-
-FUNC VOID DIA_Jarvis_WARN_FLINT_KRET()
-{
-    AI_Output (other, self ,"DIA_Jarvis_WARN_FLINT_KRET_15_01"); //To wyrzucony z kopalni Kret. Ma trafiæ do Ry¿owego Ksiêcia.
-    AI_Output (self, other ,"DIA_Jarvis_WARN_FLINT_KRET_03_02"); //Rozumiem, przechodŸcie. 
-    B_GIVEXP (100);
-    Info_ClearChoices		(DIA_Jarvis_WARN_FLINT);
-    AI_StopProcessInfos	(self);
-};
-
-FUNC VOID DIA_Jarvis_WARN_FLINT_ZBIEG()
-{
-    AI_Output (other, self ,"DIA_Jarvis_WARN_FLINT_ZBIEG_15_01"); //To zbieg z pól ry¿owych. Uda³o mi siê go z³apaæ.
-    AI_Output (self, other ,"DIA_Jarvis_WARN_FLINT_ZBIEG_03_02"); //Zbieg? Doprawdy?
-    AI_Output (self, other ,"DIA_Jarvis_WARN_FLINT_ZBIEG_03_03"); //Stojê tu ca³y, pieprzony dzieñ i nikogo nie widzia³em. 
-    AI_Output (other, self ,"DIA_Jarvis_WARN_FLINT_ZBIEG_15_04"); //Emm... Chodzi³o mi o to, ¿e uciek³ ze swojej chaty i nie przyszed³ rankiem na pola.
-    AI_Output (other, self ,"DIA_Jarvis_WARN_FLINT_ZBIEG_15_05"); //Ukrywa³ siê w górach. 
-    AI_Output (self, other ,"DIA_Jarvis_WARN_FLINT_ZBIEG_03_06"); //Niech ci bêdzie. Pogadam jeszcze o tym z Lewusem. 
-    Info_ClearChoices		(DIA_Jarvis_WARN_FLINT);
-    AI_StopProcessInfos	(self);
-};
+///////////////////////////////////////////////////////////////////////////////////////////
+// __MOD DIALOGS
+//	////////  ////////
+//  //        //    //
+//  //////    //////
+//  //        //   //
+//  ///////// //    //
+///////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////
 // ŒCIE¯KA KRETA 
@@ -627,7 +581,7 @@ INSTANCE DIA_Jarvis_PoBuncie (C_INFO)
 
 FUNC INT DIA_Jarvis_PoBuncie_Condition()
 {
- if (Npc_IsDead(Bau_900_Ricelord))
+	if (Npc_IsDead(Bau_900_Ricelord))
     && (Npc_IsDead(ORG_844_Lefty))
     {
     return TRUE;

@@ -40,7 +40,7 @@ INSTANCE DIA_BaalTyon_NoTalk(C_INFO)
 	information		= DIA_BaalTyon_NoTalk_Info;
 	permanent		= 1;
 	//important 		= 1;
-	description = "XXX";
+	description = "(Spróbuj porozmawiaæ)";
 };                       
 
 FUNC INT DIA_BaalTyon_NoTalk_Condition()

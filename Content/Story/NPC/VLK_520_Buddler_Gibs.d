@@ -2,7 +2,7 @@ instance VLK_520_Buddler (Npc_Default)
 {
 	//-------- primary data --------
 	
-	name =							Name_Buddler;
+	name =							"Gibs";
 	npctype =						npctype_main;
 	guild =							GIL_VLK;      
 	level =							2;

@@ -65,7 +65,7 @@ FUNC VOID DIA_Snake_NOWAY_Info()
     AI_Output (other, self ,"DIA_Snake_NOWAY_15_14"); //No dobra, ale jak zamierzasz siê dostaæ do lochów?
     AI_Output (self, other ,"DIA_Snake_NOWAY_03_15"); //Spokojnie, mam swoje sposoby. Zrobiê ma³e zamieszanie i przedostanê siê w pobli¿e sypialni Stra¿ników. Stamt¹d do wejœcia do lochów ju¿ tylko kilka kroków.
     AI_Output (other, self ,"DIA_Snake_NOWAY_15_16"); //W porz¹dku. Powodzenia.
-    AI_Output (self, other ,"DIA_Snake_NOWAY_03_17"); //Pospiesz siê. A i gdybym siê nie zjawi³ za drzwiami nie panikuj.. Przeœpij siê, poczekaj, a ja na pewno siê zjawiê.
+    AI_Output (self, other ,"DIA_Snake_NOWAY_03_17"); //Pospiesz siê. A i gdybym siê nie zjawi³ za drzwiami nie panikuj. Przeœpij siê, poczekaj, a ja na pewno siê zjawiê.
     B_LogEntry                     (CH1_ZabojstwBlizny,"Odnalaz³em Snake'a w zamku. Musze mu pomóc w ucieczce. W tym celu mam siê udaæ na plac targowy, odnaleŸæ dziurê w murze i zabiæ pilnuj¹cego wyjœcia z lochów Stra¿nika.");
 	
 
