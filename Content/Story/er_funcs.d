@@ -1,6 +1,8 @@
 //Edycja rozszerzona 1.4 - funkcje
 //by gothic1210
 
+
+
 func void upojenie_alkoholowe ()
 {
 print ("Zmniejszono szanse na trafienia krytyczne!");

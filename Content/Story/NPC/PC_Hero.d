@@ -130,7 +130,7 @@ INSTANCE PC_Hero(NPC_DEFAULT)
 	//-------------------------
 	CreateInvItem 	(self, ItWr_Fire_Letter_01);
 	CreateInvItem 	(self, ItFoLoaf);
-	CreateInvItem 	(self, ZdolnosciLowieckie);
+	//CreateInvItem 	(self, ZdolnosciLowieckie);
 	
 };
 

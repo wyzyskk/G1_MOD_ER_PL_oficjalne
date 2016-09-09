@@ -1,5 +1,14 @@
 
+func void Mod_Menu_HSkills ()
+{
+if (MEM_KeyState (KEY_P) == KEY_PRESSED) && (InfoManager_HasFinished ())
+{
+UseFunc1Skills ();
+//MEM_Game.singleStep = true;
 
+};
+//print ("pause");
+};
 
 
 //===================================================
@@ -3299,6 +3308,8 @@ FUNC VOID INIT_WORLD ()
 	// Zamiast Tick Tocka, to zalecam uzywania funkcji FF_ApplyOnce itp.. Nie wymagaja ingerencji w zen.
 	// Na GG moge wytlumaczyc ich dzialanie i jak je uzywac.
 	FF_ApplyOnce(SetColors); 
+	FF_ApplyOnce(Mod_Menu_HSkills);
+	
 	//FF_ApplyOnce(ExpBarFunc); 
 	
 	FF_Apply (ScreenFade);

@@ -1114,10 +1114,12 @@ func void UseFunc1Skills ()
 		
 		nDocID = 	Doc_Create		()			  ;								// DocManager 
 					Doc_SetPages	( nDocID,  1 );                         //wieviel Pages
-					Doc_SetPage 	( nDocID,  0, "MENU_INGAME.TGA"  , 0 		); 
+					Doc_SetPage 	( nDocID,  0, "STATUS_BACK.TGA"  , 0 		); 
 					Doc_SetFont 	( nDocID, -1, "Font_Old_10_WhiteStats.tga"	   			); 	// -1 -> all pages 
 					Doc_SetMargins	( nDocID, -1, 50, 50, 50, 50, 1   		);  //  0 -> margins are in pixels
-Doc_PrintLine	( nDocID,  0, "Moje zdolnoœci ³owieckie");		
+					Doc_PrintLine	( nDocID,  0, "");	
+					Doc_PrintLine	( nDocID,  0, "");	
+Doc_PrintLine	( nDocID,  0, "Umiejêtnoœci myœliwskie");		
 Doc_PrintLine	( nDocID,  0, "");	
 						if (Knows_GetTeeth == true)
 {
