@@ -5,7 +5,7 @@ instance NONE_DarkLord_Tower (Npc_Default)
 	name =							"Theodrik";
 	npctype =						npctype_main;
 	guild =							GIL_SKELETON;      
-	level =							500;
+	level =							50;
 	
 	
 	voice =							1;
@@ -20,8 +20,8 @@ instance NONE_DarkLord_Tower (Npc_Default)
 	attribute[ATR_HITPOINTS_MAX] =	600;
 	attribute[ATR_HITPOINTS] =		600;
 
-	protection	[PROT_BLUNT]		=	45;
-	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_BLUNT]		=	80;
+	protection	[PROT_EDGE]			=	80;
 	protection	[PROT_POINT]		=	100; //SN:besonders resistent gegen Pfeile
 	protection	[PROT_FIRE]			=	45;
 	protection	[PROT_FLY]			=	0;
@@ -39,7 +39,7 @@ instance NONE_DarkLord_Tower (Npc_Default)
 	fight_tactic	=	FAI_HUMAN_master; 
 
 	//-------- Talents  --------                                    
-	Npc_SetTalentSkill (self, NPC_TALENT_2H,2);
+	Npc_SetTalentSkill (self, NPC_TALENT_2H,8);
 	
 	//-------- inventory --------                                    
 
@@ -65,7 +65,7 @@ instance NONE_DarkLord_Monestry (Npc_Default)
 	name =							"Mertinos";
 	npctype =						npctype_main;
 	guild =							GIL_NONE;      
-	level =							500;
+	level =							50;
 	
 	
 	voice =							1;
@@ -84,8 +84,8 @@ instance NONE_DarkLord_Monestry (Npc_Default)
 	Mdl_SetVisual		(self,"HUMANS.MDS");
 	Mdl_ApplyOverlayMds	(self,"Humans_Mage.mds");
 	//				body mesh,				head mesh,				hairmesh,	face-tex,	hair-tex,	skin	
-	Mdl_SetVisualBody (self,"hum_body_Naked0",0,1,"Hum_Head_Pony", 84, 1, PoszukiwaczArmor);
-
+	//Mdl_SetVisualBody (self,"hum_body_Naked0",0,1,"Hum_Head_Pony", 84, 1, MERTINOS_ARMOR);
+	Mdl_SetVisualBody 		(self,	"Zom_Body",		0,			0,			"Zom_Head", 0,  		3,		MERTINOS_ARMOR);
 	B_Scale (self);		
 	Mdl_SetModelFatness (self, 0);
 	fight_tactic	=	FAI_HUMAN_MAGE;
@@ -95,13 +95,10 @@ instance NONE_DarkLord_Monestry (Npc_Default)
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE,6);
 	
 	//-------- inventory --------                                    
-CreateInvItems			(self,	ItArScrollSummonSkeletons,	10);
-	EquipItem (self, ItArScrollSummonSkeletons);
+	CreateInvItems			(self,	ItArScrollSummonSkeletons,	5);
+	CreateInvItems			(self,	ItArScrollChainLightning,10);
+	CreateInvItems			(self,	ItArScrollSummonGolem,1);	
 	CreateInvItems (self, Gold01,10);
-		
-
-	CreateInvItem			(self,	ItArRuneThunderbolt);
-	
 	CreateInvItems			(self,	ItFo_Potion_Mana_01,	10);	
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_7891;
@@ -120,7 +117,7 @@ instance NONE_DarkLord_Castle (Npc_Default)
 	name =							"Armand";
 	npctype =						npctype_main;
 	guild =							GIL_SKELETON;      
-	level =							500;
+	level =							50;
 	
 	
 	voice =							1;
@@ -135,12 +132,12 @@ instance NONE_DarkLord_Castle (Npc_Default)
 	attribute[ATR_HITPOINTS_MAX] =	600;
 	attribute[ATR_HITPOINTS] =		600;
 
-	protection	[PROT_BLUNT]		=	45;
-	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_BLUNT]		=	90;
+	protection	[PROT_EDGE]			=	90;
 	protection	[PROT_POINT]		=	100; //SN:besonders resistent gegen Pfeile
-	protection	[PROT_FIRE]			=	45;
+	protection	[PROT_FIRE]			=	55;
 	protection	[PROT_FLY]			=	0;
-	protection	[PROT_MAGIC]		=	45;		
+	protection	[PROT_MAGIC]		=	70;		
 	//-------- visuals --------
 	// 				animations
 	Mdl_SetVisual		(self,"HUMANS.MDS");
@@ -154,7 +151,7 @@ instance NONE_DarkLord_Castle (Npc_Default)
 	fight_tactic	=	FAI_HUMAN_master; 
 
 	//-------- Talents  --------                                    
-	Npc_SetTalentSkill (self, NPC_TALENT_2H,2);
+	Npc_SetTalentSkill (self, NPC_TALENT_2H,8);
 	
 	//-------- inventory --------                                    
 

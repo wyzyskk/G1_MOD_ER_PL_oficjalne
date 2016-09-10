@@ -42,6 +42,38 @@ INSTANCE DREN_ARMOR(C_Item)
 };
 
 /******************************************************************************************/
+/**** SZATA MERTINOSA
+/******************************************************************************************/
+INSTANCE MERTINOS_ARMOR(C_Item)
+{
+	name 					=	"Szata Mertinosa";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	50;
+	protection [PROT_FIRE] 	= 	35;
+	protection [PROT_MAGIC] = 	45;
+	wear 					=	WEAR_TORSO;
+
+	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+
+	visual 					=	"kdfh.3ds";
+	visual_change 			=	"Hum_KDFS_ARMOR.asc";
+	visual_skin 			=	3;
+	material 				=	MAT_LEATHER;
+	owner 					= 	NONE_DarkLord_Monestry;
+	description				=	name;
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+/******************************************************************************************/
 /**** SZATA ISENTHORA (ROZDZ. 4)
 /******************************************************************************************/
 INSTANCE ISENTHOR_ARMOR(C_Item)
