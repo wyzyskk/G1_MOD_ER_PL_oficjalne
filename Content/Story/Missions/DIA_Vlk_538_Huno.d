@@ -24,7 +24,7 @@ FUNC VOID DIA_Huno_Exit_Info()
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Huno
-// Rozdzia³ 1 
+// RozdziaÂ³ 1 
 // Dialogi podstawowe
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -37,9 +37,9 @@ INSTANCE DIA_Huno_YouKnowYourJob (C_INFO)
 	nr				= 2;
 	condition		= DIA_Huno_YouKnowYourJob_Condition;
 	information		= DIA_Huno_YouKnowYourJob_Info;
-	permanent		= 0;
+	permanent		= 1;
 	important		= 0;
-	description		= "Widzê, ¿e znasz siê na swoim fachu.";
+	description		= "WidzÃª, Â¿e znasz siÃª na swoim fachu.";
 };
 
 FUNC INT DIA_Huno_YouKnowYourJob_Condition()
@@ -49,9 +49,9 @@ FUNC INT DIA_Huno_YouKnowYourJob_Condition()
 
 FUNC VOID DIA_Huno_YouKnowYourJob_Info()
 {
-	AI_Output (other,self,"DIA_Huno_YouKnowYourJob_15_00"); //Widzê, ¿e znasz siê na swoim fachu.
-	AI_Output (self,other,"DIA_Huno_YouKnowYourJob_09_01"); //Jeszcze nikt nie mia³ powodu do narzekania.
-	AI_Output (self,other,"DIA_Huno_YouKnowYourJob_09_02"); //I lepiej, ¿eby nikt tego nie robi³! Ka¿dy dureñ potrzebuje miecza, i to w³aœnie ode mnie dostaj¹!
+	AI_Output (other,self,"DIA_Huno_YouKnowYourJob_15_00"); //WidzÃª, Â¿e znasz siÃª na swoim fachu.
+	AI_Output (self,other,"DIA_Huno_YouKnowYourJob_09_01"); //Jeszcze nikt nie miaÂ³ powodu do narzekania.
+	AI_Output (self,other,"DIA_Huno_YouKnowYourJob_09_02"); //I lepiej, Â¿eby nikt tego nie robiÂ³! KaÂ¿dy dureÃ± potrzebuje miecza, i to wÂ³aÅ“nie ode mnie dostajÂ¹!
 };
 
 
@@ -66,7 +66,7 @@ INSTANCE DIA_Huno_HowLong (C_INFO)
 	information		= DIA_Huno_HowLong_Info;
 	permanent		= 0;
 	important		= 0;
-	description		= "Jak d³ugo zajmuje wykucie jednego miecza?";
+	description		= "Jak dÂ³ugo zajmuje wykucie jednego miecza?";
 };
 
 FUNC INT DIA_Huno_HowLong_Condition()
@@ -79,15 +79,15 @@ FUNC INT DIA_Huno_HowLong_Condition()
 
 FUNC VOID DIA_Huno_HowLong_Info()
 {
-	AI_Output (other,self,"DIA_Huno_HowLong_15_00"); //Jak d³ugo zajmuje wykucie jednego miecza?
-	AI_Output (self,other,"DIA_Huno_HowLong_09_01"); //To zale¿y. Jeœli chodzi o najprostsze ostrza, wystarczy kilka minut.
-	AI_Output (self,other,"DIA_Huno_HowLong_09_02"); //Oczywiœcie pod warunkiem, ¿e jestem odpowiednio zmotywowany... Finansowo.
-	AI_Output (self,other,"DIA_Huno_HowLong_09_03"); //Oczywiœcie œwiry pokroju Œwistaka musz¹ czekaæ na swoje cacka nieco d³u¿ej.
-	AI_Output (other,self,"DIA_Huno_HowLong_15_04"); //Dlaczego? Czy¿by Œwistak za ma³o ci zap³aci³?
-	AI_Output (self,other,"DIA_Huno_HowLong_09_05"); //Nie, wrêcz przeciwnie. Za swój ostatni miecz da³ mi 150 bry³ek rudy.
-	AI_Output (self,other,"DIA_Huno_HowLong_09_06"); //Ale facet lubi bogate zdobienia i takie tam babskie fanaberie, a to oczywiœcie kosztuje!
+	AI_Output (other,self,"DIA_Huno_HowLong_15_00"); //Jak dÂ³ugo zajmuje wykucie jednego miecza?
+	AI_Output (self,other,"DIA_Huno_HowLong_09_01"); //To zaleÂ¿y. JeÅ“li chodzi o najprostsze ostrza, wystarczy kilka minut.
+	AI_Output (self,other,"DIA_Huno_HowLong_09_02"); //OczywiÅ“cie pod warunkiem, Â¿e jestem odpowiednio zmotywowany... Finansowo.
+	AI_Output (self,other,"DIA_Huno_HowLong_09_03"); //OczywiÅ“cie Å“wiry pokroju Å’wistaka muszÂ¹ czekaÃ¦ na swoje cacka nieco dÂ³uÂ¿ej.
+	AI_Output (other,self,"DIA_Huno_HowLong_15_04"); //Dlaczego? CzyÂ¿by Å’wistak za maÂ³o ci zapÂ³aciÂ³?
+	AI_Output (self,other,"DIA_Huno_HowLong_09_05"); //Nie, wrÃªcz przeciwnie. Za swÃ³j ostatni miecz daÂ³ mi 150 bryÂ³ek rudy.
+	AI_Output (self,other,"DIA_Huno_HowLong_09_06"); //Ale facet lubi bogate zdobienia i takie tam babskie fanaberie, a to oczywiÅ“cie kosztuje!
 	AI_Output (self,other,"DIA_Huno_HowLong_09_07"); //Hej, ciekawski z ciebie facet, kolego!
-	B_LogEntry (CH1_JoinOC,"Huno wyrabia miecze dla cz³onków Obozu. Podobno Œwistak zamówi³ u niego specjalne ostrze.");
+	B_LogEntry (CH1_JoinOC,"Huno wyrabia miecze dla czÂ³onkÃ³w Obozu. Podobno Å’wistak zamÃ³wiÂ³ u niego specjalne ostrze.");
 };
 
 // **************************************************
@@ -101,7 +101,7 @@ INSTANCE DIA_Huno_HowsYourBusiness (C_INFO)
 	information		= DIA_Huno_HowsYourBusiness_Info;
 	permanent		= 0;
 	important		= 0;
-	description		= "Jak stoisz z prac¹, kowalu?";
+	description		= "Jak stoisz z pracÂ¹, kowalu?";
 };
 
 FUNC INT DIA_Huno_HowsYourBusiness_Condition()
@@ -114,12 +114,12 @@ FUNC INT DIA_Huno_HowsYourBusiness_Condition()
 
 FUNC VOID DIA_Huno_HowsYourBusiness_Info()
 {
-	AI_Output (other,self,"DIA_Huno_HowsYourBusiness_15_00"); //Jak stoisz z prac¹, kowalu?
-	AI_Output (self,other,"DIA_Huno_HowsYourBusiness_09_01"); //A co ciê to obchodzi?
-	AI_Output (other,self,"DIA_Huno_HowsYourBusiness_15_02"); //Byæ mo¿e mam dla ciebie zamówienie.
-	AI_Output (self,other,"DIA_Huno_HowsYourBusiness_09_03"); //Czy¿by? A có¿ takiego, jeœli wolno spytaæ?
-	AI_Output (other,self,"DIA_Huno_HowsYourBusiness_15_04"); //Jeszcze siê zastanowiê.
-	AI_Output (self,other,"DIA_Huno_HowsYourBusiness_09_05"); //Wróæ, jak naprawdê bêdziesz czegoœ potrzebowa³. Póki co - nie zawracaj mi g³owy.
+	AI_Output (other,self,"DIA_Huno_HowsYourBusiness_15_00"); //Jak stoisz z pracÂ¹, kowalu?
+	AI_Output (self,other,"DIA_Huno_HowsYourBusiness_09_01"); //A co ciÃª to obchodzi?
+	AI_Output (other,self,"DIA_Huno_HowsYourBusiness_15_02"); //ByÃ¦ moÂ¿e mam dla ciebie zamÃ³wienie.
+	AI_Output (self,other,"DIA_Huno_HowsYourBusiness_09_03"); //CzyÂ¿by? A cÃ³Â¿ takiego, jeÅ“li wolno spytaÃ¦?
+	AI_Output (other,self,"DIA_Huno_HowsYourBusiness_15_04"); //Jeszcze siÃª zastanowiÃª.
+	AI_Output (self,other,"DIA_Huno_HowsYourBusiness_09_05"); //WrÃ³Ã¦, jak naprawdÃª bÃªdziesz czegoÅ“ potrzebowaÂ³. PÃ³ki co - nie zawracaj mi gÂ³owy.
 };
 
 // **************************************************
@@ -136,7 +136,7 @@ INSTANCE DIA_Huno_LEARNSMITH (C_INFO)
 	information		= DIA_Huno_LEARNSMITH_Info;
 	permanent		= 0;
 	important		= 0;
-	description		= "Chêtnie spróbowa³bym si³ jako kowal.";
+	description		= "ChÃªtnie sprÃ³bowaÂ³bym siÂ³ jako kowal.";
 };
 
 FUNC INT DIA_Huno_LEARNSMITH_Condition()
@@ -149,21 +149,21 @@ FUNC INT DIA_Huno_LEARNSMITH_Condition()
 
 FUNC VOID DIA_Huno_LEARNSMITH_Info()
 {
-	AI_Output (other,self,"DIA_Huno_LEARNSMITH_15_00"); //Chêtnie spróbowa³bym si³ jako kowal.
-	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_01"); //Tylko nie wyobra¿aj sobie, ¿e tak ³atwo jest wykuæ solidny miecz!
-	AI_Output (other,self,"DIA_Huno_LEARNSMITH_15_02"); //Co powinienem zrobiæ?
-	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_03"); //Dobra, weŸ stal i rozgrzej j¹ nad ogniem.
-	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_04"); //Potem rozbij j¹ na kowadle.
-	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_05"); //Jak skoñczysz, w³ó¿ rozgrzane ostrze do wody, ¿eby je zahartowaæ.
-	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_06"); //Na koniec trzeba je jeszcze naostrzyæ na kamieniu szlifierskim.
+	AI_Output (other,self,"DIA_Huno_LEARNSMITH_15_00"); //ChÃªtnie sprÃ³bowaÂ³bym siÂ³ jako kowal.
+	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_01"); //Tylko nie wyobraÂ¿aj sobie, Â¿e tak Â³atwo jest wykuÃ¦ solidny miecz!
+	AI_Output (other,self,"DIA_Huno_LEARNSMITH_15_02"); //Co powinienem zrobiÃ¦?
+	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_03"); //Dobra, weÅ¸ stal i rozgrzej jÂ¹ nad ogniem.
+	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_04"); //Potem rozbij jÂ¹ na kowadle.
+	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_05"); //Jak skoÃ±czysz, wÂ³Ã³Â¿ rozgrzane ostrze do wody, Â¿eby je zahartowaÃ¦.
+	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_06"); //Na koniec trzeba je jeszcze naostrzyÃ¦ na kamieniu szlifierskim.
 	AI_Output (other,self,"DIA_Huno_LEARNSMITH_15_07"); //Rozumiem.
-	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_08"); //Oczywiœcie do tego wszystkiego potrzeba odpowiedniego wyposa¿enia. Móg³bym ci je sprzedaæ, jeœli chcesz.
+	AI_Output (self,other,"DIA_Huno_LEARNSMITH_09_08"); //OczywiÅ“cie do tego wszystkiego potrzeba odpowiedniego wyposaÂ¿enia. MÃ³gÂ³bym ci je sprzedaÃ¦, jeÅ“li chcesz.
 	//Npc_SetTalentSkill(hero, NPC_TALENT_REGENERATE, 1);
-	//PrintScreen	("Nowa umiejêtnoœæ: Kowalstwo", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	//PrintScreen	("Nowa umiejÃªtnoÅ“Ã¦: Kowalstwo", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	//B_giveXP (150);
 	
 	Log_CreateTopic (GE_TraderOC,LOG_NOTE);
-	B_LogEntry		(GE_TraderOC,"U Huno kupiê narzêdzia kowalskie. Znajdê go w Zewnêtrznym Pierœcieniu."); 
+	B_LogEntry		(GE_TraderOC,"U Huno kupiÃª narzÃªdzia kowalskie. ZnajdÃª go w ZewnÃªtrznym PierÅ“cieniu."); 
 	Huno_LearnSmith = TRUE;
 };
 
@@ -178,7 +178,7 @@ INSTANCE DIA_Huno_BUYSMITH (C_INFO)
 	information		= DIA_Huno_BUYSMITH_Info;
 	permanent		= 1;
 	important		= 0;
-	description		= "Chcia³bym kupiæ narzêdzia kowalskie!";
+	description		= "ChciaÂ³bym kupiÃ¦ narzÃªdzia kowalskie!";
 	trade			= 1;
 };
 
@@ -192,7 +192,7 @@ FUNC INT DIA_Huno_BUYSMITH_Condition()
 
 FUNC VOID DIA_Huno_BUYSMITH_Info()
 {
-	AI_Output (other,self,"DIA_Huno_BUYSMITH_15_00"); //Chcia³bym kupiæ narzêdzia kowalskie!
+	AI_Output (other,self,"DIA_Huno_BUYSMITH_15_00"); //ChciaÂ³bym kupiÃ¦ narzÃªdzia kowalskie!
 
 	if	(Npc_HasItems(self,ItMiSwordRaw		) < 5)		{	CreateInvItems(self,ItMiSwordRaw,		5);	};
 	if	(Npc_HasItems(self,ItMiSwordRawHot	) < 5)		{	CreateInvItems(self,ItMiSwordRawHot,	5);	};
@@ -203,7 +203,7 @@ FUNC VOID DIA_Huno_BUYSMITH_Info()
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Huno
-// Rozdzia³ 1 
+// RozdziaÂ³ 1 
 // Ruda dla Togarda
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -218,7 +218,7 @@ INSTANCE DIA_Huno_FakeMagicOre (C_INFO)
 	information		= DIA_Huno_FakeMagicOre_Info;
 	permanent		= 0;
 	important		= 0;
-	description		= "Potrzebujê czegoœ, co przypomina czarn¹ rudê.";
+	description		= "PotrzebujÃª czegoÅ“, co przypomina czarnÂ¹ rudÃª.";
 };
 
 FUNC INT DIA_Huno_FakeMagicOre_Condition()
@@ -231,13 +231,13 @@ FUNC INT DIA_Huno_FakeMagicOre_Condition()
 
 FUNC VOID DIA_Huno_FakeMagicOre_Info()
 {
-	AI_Output (other,self,"DIA_Huno_FakeMagicOre_15_00"); //Potrzebujê czegoœ, co przypomina czarn¹ rudê.
-	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_01"); //Po co ci coœ takiego?
-	AI_Output (other,self,"DIA_Huno_FakeMagicOre_15_02"); //Powiedzmy, ¿e chcê zrobiæ koledze dowcip. Umiesz coœ takiego zrobiæ?
-	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_03"); //No dobra, bêdê siê musia³ z tym pobawiæ, ale tylko za CZTERDZEIEŒÆI bry³ek rudy, jasne?
-	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_04"); //A, i jeszcze jedno! Efekt nie bêdzie trwa³y. Po jakimœ czasie wyjdzie na jaw, ¿e to ¿art. Jeœli ten twój kole¿ka zacznie za bardzo d³ubaæ...
-	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_05"); //... to mo¿e siê dokopaæ do prawdy. Miej to na uwadze. 
-	B_LogEntry               (CH1_ZmianaLorenza,"Zapyta³em Huno, czy móg³by stworzyæ coœ co bêdzie przypominaæ czarn¹ rud¹. Zrobi to za czterdzieœci bry³ek rudy. To pozwoli mi przekonaæ Togarda do przy³¹czania siê do organizowanej zmiany do Kopalni.");	
+	AI_Output (other,self,"DIA_Huno_FakeMagicOre_15_00"); //PotrzebujÃª czegoÅ“, co przypomina czarnÂ¹ rudÃª.
+	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_01"); //Po co ci coÅ“ takiego?
+	AI_Output (other,self,"DIA_Huno_FakeMagicOre_15_02"); //Powiedzmy, Â¿e chcÃª zrobiÃ¦ koledze dowcip. Umiesz coÅ“ takiego zrobiÃ¦?
+	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_03"); //No dobra, bÃªdÃª siÃª musiaÂ³ z tym pobawiÃ¦, ale tylko za CZTERDZEIEÅ’Ã†I bryÂ³ek rudy, jasne?
+	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_04"); //A, i jeszcze jedno! Efekt nie bÃªdzie trwaÂ³y. Po jakimÅ“ czasie wyjdzie na jaw, Â¿e to Â¿art. JeÅ“li ten twÃ³j koleÂ¿ka zacznie za bardzo dÂ³ubaÃ¦...
+	AI_Output (self,other,"DIA_Huno_FakeMagicOre_09_05"); //... to moÂ¿e siÃª dokopaÃ¦ do prawdy. Miej to na uwadze. 
+	B_LogEntry               (CH1_ZmianaLorenza,"ZapytaÂ³em Huno, czy mÃ³gÂ³by stworzyÃ¦ coÅ“ co bÃªdzie przypominaÃ¦ czarnÂ¹ rudÂ¹. Zrobi to za czterdzieÅ“ci bryÂ³ek rudy. To pozwoli mi przekonaÃ¦ Togarda do przyÂ³Â¹czania siÃª do organizowanej zmiany do Kopalni.");	
 };
 
 // **************************************************
@@ -251,7 +251,7 @@ INSTANCE DIA_Huno_BuyFakeOre (C_INFO)
 	information		= DIA_Huno_BuyFakeOre_Info;
 	permanent		= 0;
 	important		= 0;
-	description		= "Przygotuj dla mnie tê imitacjê czarnej rudy.";
+	description		= "Przygotuj dla mnie tÃª imitacjÃª czarnej rudy.";
 };
 
 FUNC INT DIA_Huno_BuyFakeOre_Condition()
@@ -264,13 +264,13 @@ FUNC INT DIA_Huno_BuyFakeOre_Condition()
 
 FUNC VOID DIA_Huno_BuyFakeOre_Info()
 {
-	AI_Output (other,self,"DIA_Huno_BuyFakeOre_15_00"); //Przygotuj dla mnie tê imitacjê czarnej rudy.
-	AI_Output (self,other,"DIA_Huno_BuyFakeOre_09_01"); //Masz, tylko pamiêtaj to, o czym ci mówi³em.
-	AI_Output (other,self,"DIA_Huno_BuyFakeOre_15_02"); //Dziêki, interesy z tob¹ to przyjemnoœæ.
-	AI_Output (self,other,"DIA_Huno_BuyFakeOre_09_03"); //Nie wierzê, ¿e ktoœ w tym miejscu, gdzie ka¿da bry³ka jest na wagê z³ota wydaje 40 sztuk na g³upi dowcip.
-	AI_Output (other,self,"DIA_Huno_BuyFakeOre_15_04"); //Spokojnie, zwróci mi siê.
-	AI_Output (self,other,"DIA_Huno_BuyFakeOre_09_05"); //'Zaufaj mi, wiem co robiê' - znam to. Powodzenia.
-	B_LogEntry               (CH1_ZmianaLorenza,"Dosta³em od Huno imitacjê czarnej rudy. Muszê j¹ teraz tylko pokazaæ Togardowi.");
+	AI_Output (other,self,"DIA_Huno_BuyFakeOre_15_00"); //Przygotuj dla mnie tÃª imitacjÃª czarnej rudy.
+	AI_Output (self,other,"DIA_Huno_BuyFakeOre_09_01"); //Masz, tylko pamiÃªtaj to, o czym ci mÃ³wiÂ³em.
+	AI_Output (other,self,"DIA_Huno_BuyFakeOre_15_02"); //DziÃªki, interesy z tobÂ¹ to przyjemnoÅ“Ã¦.
+	AI_Output (self,other,"DIA_Huno_BuyFakeOre_09_03"); //Nie wierzÃª, Â¿e ktoÅ“ w tym miejscu, gdzie kaÂ¿da bryÂ³ka jest na wagÃª zÂ³ota wydaje 40 sztuk na gÂ³upi dowcip.
+	AI_Output (other,self,"DIA_Huno_BuyFakeOre_15_04"); //Spokojnie, zwrÃ³ci mi siÃª.
+	AI_Output (self,other,"DIA_Huno_BuyFakeOre_09_05"); //'Zaufaj mi, wiem co robiÃª' - znam to. Powodzenia.
+	B_LogEntry               (CH1_ZmianaLorenza,"DostaÂ³em od Huno imitacjÃª czarnej rudy. MuszÃª jÂ¹ teraz tylko pokazaÃ¦ Togardowi.");
 	B_GiveInvItems (other, self, itminugget,40);
 	CreateInvItems (self,itmi_Fakeblackore,1);
 	B_GiveInvItems (self,hero,itmi_Fakeblackore,1);
@@ -278,8 +278,8 @@ FUNC VOID DIA_Huno_BuyFakeOre_Info()
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Huno
-// Rozdzia³ 1 
-// Wykucie miecza dla Œwistaka (tymczasowo usuniête) #Kowalstwo
+// RozdziaÂ³ 1 
+// Wykucie miecza dla Å’wistaka (tymczasowo usuniÃªte) #Kowalstwo
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //========================================
@@ -293,7 +293,7 @@ INSTANCE DIA_Huno_OstrzeWhistelra (C_INFO)
    condition    = DIA_Huno_OstrzeWhistelra_Condition;
    information  = DIA_Huno_OstrzeWhistelra_Info;
    permanent	= FALSE;
-   description	= "Sprzeda³eœ ju¿ ostrze Œwistakowi?";
+   description	= "SprzedaÂ³eÅ“ juÂ¿ ostrze Å’wistakowi?";
 };
 
 FUNC INT DIA_Huno_OstrzeWhistelra_Condition()
@@ -308,10 +308,10 @@ FUNC INT DIA_Huno_OstrzeWhistelra_Condition()
 
 FUNC VOID DIA_Huno_OstrzeWhistelra_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_OstrzeWhistelra_15_01"); //Sprzeda³eœ ju¿ ostrze Œwistakowi?
-    AI_Output (self, other ,"DIA_Huno_OstrzeWhistelra_03_02"); //Nie. Ostatnio by³ u mnie Fisk i zaproponowa³, ¿e bêdzie moim poœrednikiem. Odda³em mu miecz za 80 bry³ek rudy.
-    AI_Output (self, other ,"DIA_Huno_OstrzeWhistelra_03_03"); //W sumie... dlaczego nie? Mam spokój. Dosta³em rudê i nie muszê siê uganiaæ za klientem.
-B_LogEntry (CH1_JoinOC,"Huno sprzeda³ ostrze dla Œwistaka Fiskowi.");
+    AI_Output (other, self ,"DIA_Huno_OstrzeWhistelra_15_01"); //SprzedaÂ³eÅ“ juÂ¿ ostrze Å’wistakowi?
+    AI_Output (self, other ,"DIA_Huno_OstrzeWhistelra_03_02"); //Nie. Ostatnio byÂ³ u mnie Fisk i zaproponowaÂ³, Â¿e bÃªdzie moim poÅ“rednikiem. OddaÂ³em mu miecz za 80 bryÂ³ek rudy.
+    AI_Output (self, other ,"DIA_Huno_OstrzeWhistelra_03_03"); //W sumie... dlaczego nie? Mam spokÃ³j. DostaÂ³em rudÃª i nie muszÃª siÃª uganiaÃ¦ za klientem.
+B_LogEntry (CH1_JoinOC,"Huno sprzedaÂ³ ostrze dla Å’wistaka Fiskowi.");
 };
 
 //========================================
@@ -325,7 +325,7 @@ INSTANCE DIA_Huno_PlanNaMiecz (C_INFO)
    condition    = DIA_Huno_PlanNaMiecz_Condition;
    information  = DIA_Huno_PlanNaMiecz_Info;
    permanent	= FALSE;
-   description	= "Czy móg³byœ sprzedaæ plan tego ostrza?";
+   description	= "Czy mÃ³gÂ³byÅ“ sprzedaÃ¦ plan tego ostrza?";
 };
 
 FUNC INT DIA_Huno_PlanNaMiecz_Condition()
@@ -340,14 +340,14 @@ FUNC INT DIA_Huno_PlanNaMiecz_Condition()
 
 FUNC VOID DIA_Huno_PlanNaMiecz_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_PlanNaMiecz_15_01"); //Czy móg³byœ sprzedaæ plan tego ostrza?
-    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_02"); //W sumie nie powinienem tego robiæ. To s¹ moje tajemnice kowalskie. No, ale dla ciebie zrobiê wyj¹tek. 
-    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_03"); //Za 100 bry³ek rudy sprzedam ci plan. 
-    AI_Output (other, self ,"DIA_Huno_PlanNaMiecz_15_04"); //Fiskowi sprzeda³eœ miecz za 80 bry³ek...
-    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_05"); //Ju¿ ci mówi³em, ¿e to s¹ moje tajemnice kowalskie.
-    AI_Output (other, self ,"DIA_Huno_PlanNaMiecz_15_06"); //Przemyœlê to...
-    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_07"); //Za dodatkowe 10 bry³ek rudy sprzedam ci kosztownoœci, które s¹ potrzebne do wykucia tego miecza.
-    B_LogEntry                     (CH1_JoinOC,"Huno za 100 bry³ek rudy sprzeda mi plan na miecz dla Œwistaka. Za dodatkowe 10 bry³ek dostanê kosztownoœci, które przydadz¹ siê przy produkcji.");
+    AI_Output (other, self ,"DIA_Huno_PlanNaMiecz_15_01"); //Czy mÃ³gÂ³byÅ“ sprzedaÃ¦ plan tego ostrza?
+    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_02"); //W sumie nie powinienem tego robiÃ¦. To sÂ¹ moje tajemnice kowalskie. No, ale dla ciebie zrobiÃª wyjÂ¹tek. 
+    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_03"); //Za 100 bryÂ³ek rudy sprzedam ci plan. 
+    AI_Output (other, self ,"DIA_Huno_PlanNaMiecz_15_04"); //Fiskowi sprzedaÂ³eÅ“ miecz za 80 bryÂ³ek...
+    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_05"); //JuÂ¿ ci mÃ³wiÂ³em, Â¿e to sÂ¹ moje tajemnice kowalskie.
+    AI_Output (other, self ,"DIA_Huno_PlanNaMiecz_15_06"); //PrzemyÅ“lÃª to...
+    AI_Output (self, other ,"DIA_Huno_PlanNaMiecz_03_07"); //Za dodatkowe 10 bryÂ³ek rudy sprzedam ci kosztownoÅ“ci, ktÃ³re sÂ¹ potrzebne do wykucia tego miecza.
+    B_LogEntry                     (CH1_JoinOC,"Huno za 100 bryÂ³ek rudy sprzeda mi plan na miecz dla Å’wistaka. Za dodatkowe 10 bryÂ³ek dostanÃª kosztownoÅ“ci, ktÃ³re przydadzÂ¹ siÃª przy produkcji.");
 };
 
 //========================================
@@ -379,7 +379,7 @@ FUNC VOID DIA_Huno_SellPlan_Info()
     AI_Output (other, self ,"DIA_Huno_SellPlan_15_01"); //Sprzedaj mi plan.
     if (Npc_HasItems (hero, ItMiNugget)>=100)
     {
-        AI_Output (self, other ,"DIA_Huno_SellPlan_03_02"); //Jasne. Jest twój.
+        AI_Output (self, other ,"DIA_Huno_SellPlan_03_02"); //Jasne. Jest twÃ³j.
         CreateInvItems (self, WhistlerSwordPlan, 1);
         B_GiveInvItems (self, other, WhistlerSwordPlan, 1);
         B_GiveInvItems (other, self, ItMiNugget, 100);
@@ -403,7 +403,7 @@ INSTANCE DIA_Huno_SellGold (C_INFO)
    condition    = DIA_Huno_SellGold_Condition;
    information  = DIA_Huno_SellGold_Info;
    permanent	= FALSE;
-   description	= "Sprzedaj mi kosztownoœci.";
+   description	= "Sprzedaj mi kosztownoÅ“ci.";
 };
 
 FUNC INT DIA_Huno_SellGold_Condition()
@@ -418,29 +418,29 @@ FUNC INT DIA_Huno_SellGold_Condition()
 
 FUNC VOID DIA_Huno_SellGold_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_SellGold_15_01"); //Sprzedaj mi kosztownoœci.
+    AI_Output (other, self ,"DIA_Huno_SellGold_15_01"); //Sprzedaj mi kosztownoÅ“ci.
     if (Npc_HasItems (hero, ItMiNugget)>=10)
     {
-        AI_Output (self, other ,"DIA_Huno_SellGold_03_02"); //Masz tu 3 bry³ki z³ota.
-        AI_Output (other, self ,"DIA_Huno_SellGold_15_03"); //A to przypadkiem nie mia³y byæ kosztownoœci?
-        AI_Output (self, other ,"DIA_Huno_SellGold_03_04"); //Za gotowe ornamenty musia³byœ mi zap³aciæ piêæ razy tyle. Nawet nie wiesz, ile jest roboty z czymœ takim.
-        AI_Output (self, other ,"DIA_Huno_SellGold_03_05"); //Nie mówi¹c ju¿ o tym, ¿e zajmuje to cholernie du¿o czasu.
+        AI_Output (self, other ,"DIA_Huno_SellGold_03_02"); //Masz tu 3 bryÂ³ki zÂ³ota.
+        AI_Output (other, self ,"DIA_Huno_SellGold_15_03"); //A to przypadkiem nie miaÂ³y byÃ¦ kosztownoÅ“ci?
+        AI_Output (self, other ,"DIA_Huno_SellGold_03_04"); //Za gotowe ornamenty musiaÂ³byÅ“ mi zapÂ³aciÃ¦ piÃªÃ¦ razy tyle. Nawet nie wiesz, ile jest roboty z czymÅ“ takim.
+        AI_Output (self, other ,"DIA_Huno_SellGold_03_05"); //Nie mÃ³wiÂ¹c juÂ¿ o tym, Â¿e zajmuje to cholernie duÂ¿o czasu.
 		DIA_Huno_SellGold.permanent = false;
-        AI_Output (other, self ,"DIA_Huno_SellGold_15_06"); //Dobra, dobra. Dotar³o.
+        AI_Output (other, self ,"DIA_Huno_SellGold_15_06"); //Dobra, dobra. DotarÂ³o.
         B_GiveInvItems (other, self, ItMiNugget, 10);
         CreateInvItems (self, Gold01, 3);
         B_GiveInvItems (self, other, Gold01, 3);
     }
     else
     {
-        AI_Output (self, other ,"DIA_Huno_SellGold_03_07"); //Nie masz nawet 10 bry³ek rudy?
+        AI_Output (self, other ,"DIA_Huno_SellGold_03_07"); //Nie masz nawet 10 bryÂ³ek rudy?
 		DIA_Huno_SellGold.permanent = true;
     };
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Huno
-// Rozdzia³ 1 
+// RozdziaÂ³ 1 
 // ZADANIE: Nowi palacze
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -455,7 +455,7 @@ INSTANCE DIA_Huno_JARAJ (C_INFO)
    condition    = DIA_Huno_JARAJ_Condition;
    information  = DIA_Huno_JARAJ_Info;
    permanent	= FALSE;
-   description	= "Zechcesz zapaliæ?";
+   description	= "Zechcesz zapaliÃ¦?";
 };
 
 FUNC INT DIA_Huno_JARAJ_Condition()
@@ -470,25 +470,25 @@ FUNC INT DIA_Huno_JARAJ_Condition()
 
 FUNC VOID DIA_Huno_JARAJ_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_JARAJ_15_01"); //Zechcesz zapaliæ?
-    AI_Output (self, other ,"DIA_Huno_JARAJ_03_02"); //Co? Ja... nie. Nie mogê. W przesz³oœci du¿o pali³em. Nie mogê do tego wracaæ.
+    AI_Output (other, self ,"DIA_Huno_JARAJ_15_01"); //Zechcesz zapaliÃ¦?
+    AI_Output (self, other ,"DIA_Huno_JARAJ_03_02"); //Co? Ja... nie. Nie mogÃª. W przeszÂ³oÅ“ci duÂ¿o paliÂ³em. Nie mogÃª do tego wracaÃ¦.
 
     Info_ClearChoices		(DIA_Huno_JARAJ);
-    Info_AddChoice		(DIA_Huno_JARAJ, "Ca³y dzieñ ciê¿ko pracujesz. Nale¿y ci siê chwila wytchnienia.", DIA_Huno_JARAJ_PRZY_PRACY);
-    Info_AddChoice		(DIA_Huno_JARAJ, "Spróbuj, to coœ nowego.", DIA_Huno_JARAJ_Sprobuj);
-    Info_AddChoice		(DIA_Huno_JARAJ, "Szkoda. W takim razie dam je komuœ innemu.", DIA_Huno_JARAJ_NIE);
+    Info_AddChoice		(DIA_Huno_JARAJ, "CaÂ³y dzieÃ± ciÃªÂ¿ko pracujesz. NaleÂ¿y ci siÃª chwila wytchnienia.", DIA_Huno_JARAJ_PRZY_PRACY);
+    Info_AddChoice		(DIA_Huno_JARAJ, "SprÃ³buj, to coÅ“ nowego.", DIA_Huno_JARAJ_Sprobuj);
+    Info_AddChoice		(DIA_Huno_JARAJ, "Szkoda. W takim razie dam je komuÅ“ innemu.", DIA_Huno_JARAJ_NIE);
 };
 
 FUNC VOID DIA_Huno_JARAJ_PRZY_PRACY()
 {
-    AI_Output (other, self ,"DIA_Huno_JARAJ_PRZY_PRACY_15_01"); //Ca³y dzieñ ciê¿ko pracujesz. Nale¿y ci siê chwila wytchnienia.
-    AI_Output (other, self ,"DIA_Huno_JARAJ_PRZY_PRACY_15_02"); //Ta przeklêta Kolonia potrafi doprowadziæ cz³owieka do sza³u. 
-    AI_Output (other, self ,"DIA_Huno_JARAJ_PRZY_PRACY_15_03"); //Lepiej zapal, odstresuj siê... Czym siê przejmowaæ?
-    AI_Output (self, other ,"DIA_Huno_JARAJ_PRZY_PRACY_03_04"); //No dobra. Jednego sobie zapalê, ale tylko jednego.
+    AI_Output (other, self ,"DIA_Huno_JARAJ_PRZY_PRACY_15_01"); //CaÂ³y dzieÃ± ciÃªÂ¿ko pracujesz. NaleÂ¿y ci siÃª chwila wytchnienia.
+    AI_Output (other, self ,"DIA_Huno_JARAJ_PRZY_PRACY_15_02"); //Ta przeklÃªta Kolonia potrafi doprowadziÃ¦ czÂ³owieka do szaÂ³u. 
+    AI_Output (other, self ,"DIA_Huno_JARAJ_PRZY_PRACY_15_03"); //Lepiej zapal, odstresuj siÃª... Czym siÃª przejmowaÃ¦?
+    AI_Output (self, other ,"DIA_Huno_JARAJ_PRZY_PRACY_03_04"); //No dobra. Jednego sobie zapalÃª, ale tylko jednego.
     B_GiveInvItems (other, self, RecruitJoint, 1);
     AI_UseItem (self, RecruitJoint);
     AI_Output (self, other ,"DIA_Huno_JARAJ_PRZY_PRACY_03_05"); //Och... Od razu lepiej.
-    B_LogEntry                     (CH1_Cpuny,"Da³em Huno zapaliæ jednego skrêta. Wypada³oby teraz daæ mu coœ innego.");
+    B_LogEntry                     (CH1_Cpuny,"DaÂ³em Huno zapaliÃ¦ jednego skrÃªta. WypadaÂ³oby teraz daÃ¦ mu coÅ“ innego.");
 	Npc_ExchangeRoutine			(Vlk_538_Huno,"pali");
 	Huno_drugs_level = 1;
     B_GiveXP (100);
@@ -499,15 +499,15 @@ FUNC VOID DIA_Huno_JARAJ_PRZY_PRACY()
 
 FUNC VOID DIA_Huno_JARAJ_Sprobuj()
 {
-    AI_Output (other, self ,"DIA_Huno_JARAJ_Sprobuj_15_01"); //Spróbuj, to coœ nowego.
-    AI_Output (self, other ,"DIA_Huno_JARAJ_Sprobuj_03_02"); //Nie. Dziêkujê. 
+    AI_Output (other, self ,"DIA_Huno_JARAJ_Sprobuj_15_01"); //SprÃ³buj, to coÅ“ nowego.
+    AI_Output (self, other ,"DIA_Huno_JARAJ_Sprobuj_03_02"); //Nie. DziÃªkujÃª. 
 };
 
 FUNC VOID DIA_Huno_JARAJ_NIE()
 {
-    AI_Output (other, self ,"DIA_Huno_JARAJ_NIE_15_01"); //Szkoda. W takim razie dam je komuœ innemu.
-    AI_Output (self, other ,"DIA_Huno_JARAJ_NIE_03_02"); //Tak bêdzie najlepiej.
-    B_LogEntry                     (CH1_Cpuny,"Nie mog³em tego zrobiæ. Ten cz³owiek wyszed³ z na³ogu i zacz¹³ w Kolonii nowe ¿ycie. Nie mogê mu go zniszczyæ.");
+    AI_Output (other, self ,"DIA_Huno_JARAJ_NIE_15_01"); //Szkoda. W takim razie dam je komuÅ“ innemu.
+    AI_Output (self, other ,"DIA_Huno_JARAJ_NIE_03_02"); //Tak bÃªdzie najlepiej.
+    B_LogEntry                     (CH1_Cpuny,"Nie mogÂ³em tego zrobiÃ¦. Ten czÂ³owiek wyszedÂ³ z naÂ³ogu i zaczÂ¹Â³ w Kolonii nowe Â¿ycie. Nie mogÃª mu go zniszczyÃ¦.");
     Info_ClearChoices		(DIA_Huno_JARAJ);
 	Huno_drugs_level = 0;
     AI_StopProcessInfos	(self);
@@ -541,9 +541,9 @@ FUNC INT DIA_Huno_HELLO2_Condition()
 FUNC VOID DIA_Huno_HELLO2_Info()
 {
     AI_Output (other, self ,"DIA_Huno_HELLO2_15_01"); //Jeszcze jednego?
-    AI_Output (self, other ,"DIA_Huno_HELLO2_03_02"); //A, tak. Chêtnie.
+    AI_Output (self, other ,"DIA_Huno_HELLO2_03_02"); //A, tak. ChÃªtnie.
     B_GiveInvItems (other, self, ItMiJoint_1, 1);
-    B_LogEntry                     (CH1_Cpuny,"Huno z chêci¹ zapali³ drugiego skrêta. ");
+    B_LogEntry                     (CH1_Cpuny,"Huno z chÃªciÂ¹ zapaliÂ³ drugiego skrÃªta. ");
     AI_UseItem (self, itmijoint_1);
     AI_StopProcessInfos	(self);
     Huno_drugs_level = 2;
@@ -582,16 +582,16 @@ FUNC VOID DIA_Huno_DAWAJ_SKRETA_Info()
     if (Npc_HasItems (other, ItMiJoint_1) >=1)
     {
         AI_Output (other, self ,"DIA_Huno_DAWAJ_SKRETA_15_02"); //Trzymaj.
-        AI_Output (self, other ,"DIA_Huno_DAWAJ_SKRETA_03_03"); //Dziêki.
+        AI_Output (self, other ,"DIA_Huno_DAWAJ_SKRETA_03_03"); //DziÃªki.
         B_GiveInvItems (other, self, ItMiJoint_1, 1);
         AI_UseItem (self, itmijoint_1);
     }
     else
     {
-        AI_Output (other, self ,"DIA_Huno_DAWAJ_SKRETA_15_04"); //Ju¿ nic nie mam.
-        AI_Output (self, other ,"DIA_Huno_DAWAJ_SKRETA_03_05"); //Cholera, muszê iœæ do Baal Tarana.
+        AI_Output (other, self ,"DIA_Huno_DAWAJ_SKRETA_15_04"); //JuÂ¿ nic nie mam.
+        AI_Output (self, other ,"DIA_Huno_DAWAJ_SKRETA_03_05"); //Cholera, muszÃª iÅ“Ã¦ do Baal Tarana.
     };
-    B_LogEntry                     (CH1_Cpuny,"NieŸle. Skrêty Baal Tarana szybko podzia³a³y na Huno. Wróci³ do swoich na³ogów. Coœ czujê, ¿e Ÿle zrobi³em.");
+    B_LogEntry                     (CH1_Cpuny,"NieÅ¸le. SkrÃªty Baal Tarana szybko podziaÂ³aÂ³y na Huno. WrÃ³ciÂ³ do swoich naÂ³ogÃ³w. CoÅ“ czujÃª, Â¿e Å¸le zrobiÂ³em.");
 	Huno_drugs_level = 3;
     B_GiveXP (100);
     AI_StopProcessInfos	(self);
@@ -623,21 +623,21 @@ FUNC INT DIA_Huno_NAGRODA_ZA_UCZCIWOSC_Condition()
 
 FUNC VOID DIA_Huno_NAGRODA_ZA_UCZCIWOSC_Info()
 {
-    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_01"); //Hej! S³ysza³em ju¿ o Baal Taranie i o twojej postawie. Jestem ci bardzo wdziêczny.
-    AI_Output (other, self ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_15_02"); //Nie ma sprawy. Zrobi³em to, co by³o s³uszne.
-    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_03"); //Doceniam to. WeŸ w nagrodê to ostrze. 
+    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_01"); //Hej! SÂ³yszaÂ³em juÂ¿ o Baal Taranie i o twojej postawie. Jestem ci bardzo wdziÃªczny.
+    AI_Output (other, self ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_15_02"); //Nie ma sprawy. ZrobiÂ³em to, co byÂ³o sÂ³uszne.
+    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_03"); //Doceniam to. WeÅ¸ w nagrodÃª to ostrze. 
     CreateInvItems (self, Miecz1H5, 1);
     B_GiveInvItems (self, other, Miecz1H5, 1);
-    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_04"); //To miecz horyzontów - wyj¹tkowe ostrze jednorêczne. Jeœli bêdziesz chcia³ siê poduczyæ walki mieczem, to pogadaj ze Scatty'm. 
-    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_05"); //Tylko pamiêtaj, ¿e on uczy wy³¹cznie cz³onków Starego Obozu. Ta broñ ma naprawdê olbrzymi potencja³. Mo¿esz to wykorzystaæ. 
-    AI_Output (other, self ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_15_06"); //Dziêkujê.
+    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_04"); //To miecz horyzontÃ³w - wyjÂ¹tkowe ostrze jednorÃªczne. JeÅ“li bÃªdziesz chciaÂ³ siÃª poduczyÃ¦ walki mieczem, to pogadaj ze Scatty'm. 
+    AI_Output (self, other ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_03_05"); //Tylko pamiÃªtaj, Â¿e on uczy wyÂ³Â¹cznie czÂ³onkÃ³w Starego Obozu. Ta broÃ± ma naprawdÃª olbrzymi potencjaÂ³. MoÂ¿esz to wykorzystaÃ¦. 
+    AI_Output (other, self ,"DIA_Huno_NAGRODA_ZA_UCZCIWOSC_15_06"); //DziÃªkujÃª.
     AI_StopProcessInfos	(self);
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Huno
-// Rozdzia³ 4 
-// Obóz Kruka
+// RozdziaÂ³ 4 
+// ObÃ³z Kruka
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //========================================
@@ -651,7 +651,7 @@ INSTANCE DIA_Huno_WhatsUpSmith (C_INFO)
    condition    = DIA_Huno_WhatsUpSmith_Condition;
    information  = DIA_Huno_WhatsUpSmith_Info;
    permanent	= FALSE;
-   description	= "Co s³ychaæ, kowalu?";
+   description	= "Co sÂ³ychaÃ¦, kowalu?";
 };
 
 FUNC INT DIA_Huno_WhatsUpSmith_Condition()
@@ -665,21 +665,21 @@ FUNC INT DIA_Huno_WhatsUpSmith_Condition()
 
 FUNC VOID DIA_Huno_WhatsUpSmith_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_WhatsUpSmith_15_01"); //Co s³ychaæ, kowalu?
-    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_02"); //Ca³kiem dobrze. Odpoczywam.
-    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_03"); //Nie ma dla mnie nic do roboty odk¹d opuœci³em Stary Obóz.
-    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_04"); //Nie mamy tutaj kuŸni, wiêc na razie zbijam b¹ki.
-    AI_Output (other, self ,"DIA_Huno_WhatsUpSmith_15_05"); //Dlaczego opuœci³eœ Stary Obóz?
-    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_06"); //Sam nie wiem. Kruk, gdy odchodzi³ doœæ d³ugo mnie do tego przekonywa³.
-    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_07"); //Mówi³, ¿e po œmierci Magów Ognia Gomez bêdzie wy³adowywa³ z³oœæ na Kopaczach i ¿e w Obozie niepotrzebny jest drugi kowal.
-    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_08"); //Ostatecznie siê zgodzi³em i teraz zastanawiam siê, czy dobrze zrobi³em.
-    AI_Output (other, self ,"DIA_Huno_WhatsUpSmith_15_09"); //Mo¿e jednak przyjd¹ lepsze czasy.
+    AI_Output (other, self ,"DIA_Huno_WhatsUpSmith_15_01"); //Co sÂ³ychaÃ¦, kowalu?
+    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_02"); //CaÂ³kiem dobrze. Odpoczywam.
+    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_03"); //Nie ma dla mnie nic do roboty odkÂ¹d opuÅ“ciÂ³em Stary ObÃ³z.
+    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_04"); //Nie mamy tutaj kuÅ¸ni, wiÃªc na razie zbijam bÂ¹ki.
+    AI_Output (other, self ,"DIA_Huno_WhatsUpSmith_15_05"); //Dlaczego opuÅ“ciÂ³eÅ“ Stary ObÃ³z?
+    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_06"); //Sam nie wiem. Kruk, gdy odchodziÂ³ doÅ“Ã¦ dÂ³ugo mnie do tego przekonywaÂ³.
+    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_07"); //MÃ³wiÂ³, Â¿e po Å“mierci MagÃ³w Ognia Gomez bÃªdzie wyÂ³adowywaÂ³ zÂ³oÅ“Ã¦ na Kopaczach i Â¿e w Obozie niepotrzebny jest drugi kowal.
+    AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_08"); //Ostatecznie siÃª zgodziÂ³em i teraz zastanawiam siÃª, czy dobrze zrobiÂ³em.
+    AI_Output (other, self ,"DIA_Huno_WhatsUpSmith_15_09"); //MoÂ¿e jednak przyjdÂ¹ lepsze czasy.
     AI_Output (self, other ,"DIA_Huno_WhatsUpSmith_03_10"); //Mam nadzieje.
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Huno
-// Rozdzia³ - 
+// RozdziaÂ³ - 
 // Wykuwanie broni
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -694,7 +694,7 @@ INSTANCE DIA_Huno_CanYouForgeWeapon (C_INFO)
    condition    = DIA_Huno_CanYouForgeWeapon_Condition;
    information  = DIA_Huno_CanYouForgeWeapon_Info;
    permanent	= FALSE;
-   description	= "Móg³byœ coœ dla mnie wykuæ?";
+   description	= "MÃ³gÂ³byÅ“ coÅ“ dla mnie wykuÃ¦?";
 };
 
 FUNC INT DIA_Huno_CanYouForgeWeapon_Condition()
@@ -708,11 +708,11 @@ FUNC INT DIA_Huno_CanYouForgeWeapon_Condition()
 
 FUNC VOID DIA_Huno_CanYouForgeWeapon_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_CanYouForgeWeapon_15_01"); //Móg³byœ coœ dla mnie wykuæ?
-    AI_Output (self, other ,"DIA_Huno_CanYouForgeWeapon_03_02"); //Ja? Nie jestem a¿ tak dobrym kowalem. Mogê wykuæ jakieœ proste bronie. 
+    AI_Output (other, self ,"DIA_Huno_CanYouForgeWeapon_15_01"); //MÃ³gÂ³byÅ“ coÅ“ dla mnie wykuÃ¦?
+    AI_Output (self, other ,"DIA_Huno_CanYouForgeWeapon_03_02"); //Ja? Nie jestem aÂ¿ tak dobrym kowalem. MogÃª wykuÃ¦ jakieÅ“ proste bronie. 
 
 	Log_CreateTopic   	(GE_Smitch,LOG_NOTE);
-    B_LogEntry			(GE_Smitch, "Huno mo¿e wukuæ dla mnie bronie z podstawowych planów kowalskich. Potrzebne bêd¹ sk³adniki i ruda.");
+    B_LogEntry			(GE_Smitch, "Huno moÂ¿e wukuÃ¦ dla mnie bronie z podstawowych planÃ³w kowalskich. Potrzebne bÃªdÂ¹ skÂ³adniki i ruda.");
 };
 
 //========================================
@@ -726,7 +726,7 @@ INSTANCE DIA_Huno_ForgeWeapon (C_INFO)
    condition    = DIA_Huno_ForgeWeapon_Condition;
    information  = DIA_Huno_ForgeWeapon_Info;
    permanent	= TRUE;
-   description	= "Wykuj dla mnie broñ.";
+   description	= "Wykuj dla mnie broÃ±.";
 };
 
 FUNC INT DIA_Huno_ForgeWeapon_Condition()
@@ -741,77 +741,77 @@ FUNC INT DIA_Huno_ForgeWeapon_Condition()
 
 FUNC VOID DIA_Huno_ForgeWeapon_Info()
 {
-    AI_Output (other, self ,"DIA_Huno_ForgeWeapon_15_01"); //Wykuj dla mnie broñ.
+    AI_Output (other, self ,"DIA_Huno_ForgeWeapon_15_01"); //Wykuj dla mnie broÃ±.
     AI_Output (self, other ,"DIA_Huno_ForgeWeapon_03_02"); //Czego potrzebujesz?
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
 
@@ -842,84 +842,84 @@ B_GiveInvItems (other,self,itminugget,40);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end 
 		Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
 //MIECZ KOWALA
@@ -945,87 +945,87 @@ B_GiveInvItems (other,self,itminugget,50);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 		Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
-//PORZ¥DNY MIECZ JEDNORÊCZNY
+//PORZÂ¥DNY MIECZ JEDNORÃŠCZNY
 FUNC VOID DIA_Huno_ForgeWeapon_Miecz1h11 ()
 {
 //ore if
@@ -1046,87 +1046,87 @@ B_GiveInvItems (other,self,itminugget,50);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 		Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
-//B£YSK NOCY
+//BÂ£YSK NOCY
 FUNC VOID DIA_Huno_ForgeWeapon_Miecz1h15 ()
 {
 //ore if
@@ -1147,84 +1147,84 @@ B_GiveInvItems (other,self,itminugget,50);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 		Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
 //SZEROKI MIECZ
@@ -1254,87 +1254,87 @@ B_GiveInvItems (other,self,itminugget,50);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 		Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
-//D£UGI MIECZ
+//DÂ£UGI MIECZ
 FUNC VOID DIA_Huno_ForgeWeapon_Plan1c ()
 {
 //ore if
@@ -1361,88 +1361,88 @@ B_GiveInvItems (other,self,itminugget,50);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	/*if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};*/
 };
 /*
-//SZTYLET ZABÓJCY
+//SZTYLET ZABÃ“JCY
 FUNC VOID DIA_Huno_ForgeWeapon_DaggerOfMurder ()
 {
 //ore if
@@ -1463,84 +1463,84 @@ B_GiveInvItems (other,self,itminugget,75);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
 //RAPIER
@@ -1566,87 +1566,87 @@ B_GiveInvItems (other,self,itminugget,75);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
-//PA£ASZ
+//PAÂ£ASZ
 FUNC VOID DIA_Huno_ForgeWeapon_BanditTrader ()
 {
 //ore if
@@ -1669,84 +1669,84 @@ B_GiveInvItems (other,self,itminugget,75);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
 //MIECZ ROZPACZY
@@ -1774,90 +1774,90 @@ B_GiveInvItems (other,self,itminugget,75);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
 /////////////////////////////////////////
-// DRO¯SZE BRONIE
+// DROÂ¯SZE BRONIE
 /////////////////////////////////////////
-//LEKKI MIECZ DWURÊCZNY
+//LEKKI MIECZ DWURÃŠCZNY
 FUNC VOID DIA_Huno_ForgeWeapon_Plan3b ()
 {
 //ore if
@@ -1881,87 +1881,87 @@ B_GiveInvItems (other,self,itminugget,150);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
-//ŒWIÊTY MŒCICIEL
+//Å’WIÃŠTY MÅ’CICIEL
 FUNC VOID DIA_Huno_ForgeWeapon_Miecz1h8 ()
 {
 //ore if
@@ -1987,90 +1987,90 @@ B_GiveInvItems (other,self,itminugget,200);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
 //////////////////////////////////////////
-// NAJDRO¯SZE MIECZE
+// NAJDROÂ¯SZE MIECZE
 //////////////////////////////////////////
-//MIECZ KRÓLEWSKI 
+//MIECZ KRÃ“LEWSKI 
 FUNC VOID DIA_Huno_ForgeWeapon_Plan3 ()
 {
 //ore if
@@ -2097,87 +2097,87 @@ B_GiveInvItems (other,self,itminugget,300);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
-//LEKKI TOPÓR BOJOWY
+//LEKKI TOPÃ“R BOJOWY
 FUNC VOID DIA_Huno_ForgeWeapon_Plan5c ()
 {
 //ore if
@@ -2204,84 +2204,84 @@ B_GiveInvItems (other,self,itminugget,300);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
 //OSTRZE BOHATERA
@@ -2311,87 +2311,87 @@ B_GiveInvItems (other,self,itminugget,300);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
-//TOPÓR WOJENNY
+//TOPÃ“R WOJENNY
 FUNC VOID DIA_Huno_ForgeWeapon_Plan7b ()
 {
 //ore if
@@ -2420,87 +2420,87 @@ B_GiveInvItems (other,self,itminugget,300);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };
-//POGROMCA ORKÓW
+//POGROMCA ORKÃ“W
 FUNC VOID DIA_Huno_ForgeWeapon_Miecz2H5 ()
 {
 //ore if
@@ -2531,83 +2531,83 @@ B_GiveInvItems (other,self,itminugget,300);
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dok³adnie plan. Nie masz wszystkich sk³adników!
+AI_Output				(self, hero,"VLK_538_Huno_NO_INGREDIENTS"); //Przeczytaj dokÂ³adnie plan. Nie masz wszystkich skÂ³adnikÃ³w!
 };
 //ingred if end
 }
 else
 {
-AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staæ ciê na moje us³ugi!
+AI_Output				(self, hero,"VLK_538_Huno_NO_ORE_WP"); //Nie staÃ¦ ciÃª na moje usÂ³ugi!
 };
 //ore if end
 	Info_ClearChoices 	(DIA_Huno_ForgeWeapon);
 	Info_Addchoice 		(DIA_Huno_ForgeWeapon,DIALOG_BACK,DIA_Huno_ForgeWeapon_back);
 	if (Npc_HasItems (hero, Plan1b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz bojowy (40 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H6) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz kowala (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h6);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H11) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Porz¹dny miecz jednorêczny (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PorzÂ¹dny miecz jednorÃªczny (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h11);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H15) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"B³ysk nocy (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"BÂ³ysk nocy (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h15);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H7) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Szeroki miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h7);
 	};
 	if (Npc_HasItems (hero, Plan1c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"D³ugi miecz (50 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"DÂ³ugi miecz (50 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan1c);
 	};
 	if (Npc_HasItems (hero, Plan_DaggerOfMurder) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabójcy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Sztylet zabÃ³jcy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_DaggerOfMurder);
 	};
 	if (Npc_HasItems (hero, Plan_Rapier) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Rapier (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Rapier);
 	};
 	if (Npc_HasItems (hero, Plan_Bandittrader) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pa³asz (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"PaÂ³asz (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_BanditTrader);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H9) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz rozpaczy (75 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1H9);
 	};
 	if (Npc_HasItems (hero, Plan3b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurêczny (150 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki miecz dwurÃªczny (150 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz1H8) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Œwiêty Mœciciel (200 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Å’wiÃªty MÅ“ciciel (200 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz1h8);
 	};
 	if (Npc_HasItems (hero, Plan3) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz królewski (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Miecz krÃ³lewski (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan3);
 	};
 	if (Npc_HasItems (hero, Plan5c) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topór bojowy (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Lekki topÃ³r bojowy (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan5c);
 	};
 	if (Npc_HasItems (hero, Plan4b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Ostrze bohatera (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan4b);
 	};
 	if (Npc_HasItems (hero, Plan7b) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Topór wojenny (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"TopÃ³r wojenny (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Plan7b);
 	};
 	if (Npc_HasItems (hero, Plan_Miecz2H5) >=1)
 	{
-	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orków (300 bry³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
+	Info_Addchoice 		(DIA_Huno_ForgeWeapon,"Pogromca orkÃ³w (300 bryÂ³ek rudy)",DIA_Huno_ForgeWeapon_Miecz2H5);
 	};
 };*/
