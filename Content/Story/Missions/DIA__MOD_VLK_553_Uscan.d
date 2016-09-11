@@ -34,7 +34,7 @@ INSTANCE DIA_Buddler_USKAN1 (C_INFO)
    condition    = DIA_Buddler_USKAN1_Condition;
    information  = DIA_Buddler_USKAN1_Info;
    permanent	= FALSE;
-   description	= "Kim jesteœ?";
+   description	= "Kim jesteÅ“?";
 };
 
 FUNC INT DIA_Buddler_USKAN1_Condition()
@@ -44,8 +44,8 @@ FUNC INT DIA_Buddler_USKAN1_Condition()
 
 FUNC VOID DIA_Buddler_USKAN1_Info()
 {
-    AI_Output (other, self ,"DIA_Buddler_USKAN1_15_01"); //Kim jesteœ?
-    AI_Output (self, other ,"DIA_Buddler_USKAN1_03_02"); //Jestem Uscan. Chyba nie muszê dodawaæ, ¿e jestem Kopaczem, prawda?
+    AI_Output (other, self ,"DIA_Buddler_USKAN1_15_01"); //Kim jesteÅ“?
+    AI_Output (self, other ,"DIA_Buddler_USKAN1_03_02"); //Jestem Uscan. Chyba nie muszÃª dodawaÃ¦, Â¿e jestem Kopaczem, prawda?
 };
 
 //========================================
@@ -73,13 +73,13 @@ FUNC INT DIA_Buddler_USKAN2_Condition()
 FUNC VOID DIA_Buddler_USKAN2_Info()
 {
     AI_Output (other, self ,"DIA_Buddler_USKAN2_15_01"); //Za co tu siedzisz?
-    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_02"); //Gildia zleci³a mi zdobycie szeœciu krwawych pucharów. Szefowa zamierza³a je pewnie opchn¹æ jakiemuœ z tych snobów, którzy gromadz¹ tego typu historyczne pami¹tki.
-    AI_Output (other, self ,"DIA_Buddler_USKAN2_15_03"); //Widaæ nie za dobrze ci posz³o, skoro wyl¹dowa³eœ na zes³aniu.
-    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_04"); //Nie przerywaj mi, to ci opowiem. Na czym to ja skoñczy³em? A no tak...
-    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_05"); //Wprawdzie uda³o mi siê œwisn¹æ puchar z domu tego piêknisia – Valentino, ale wpad³em podczas przeczesywania domu Gerbrandta.
-    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_06"); //By³em pewien, ¿e ten krêtacz g³êboko œpi, a tymczasem wymkn¹³ siê ze swojej rezydencji i zawo³a³ stra¿e. Mój dalszy los by³ ³atwy do przewidzenia. 
-    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_07"); //Ten Gerbrandt sam prowadzi ró¿ne ciemne interesy. W Kolonii Karnej jest ju¿ jego by³y wspólnik, który odwala³ za niego brudn¹ robotê.
-    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_08"); //Tylko czekaæ i ten obleœny knur sam wyl¹duje w Górniczej Dolinie, a wtedy nie chcia³bym byæ na jego miejscu.
+    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_02"); //Gildia zleciÂ³a mi zdobycie szeÅ“ciu krwawych pucharÃ³w. Szefowa zamierzaÂ³a je pewnie opchnÂ¹Ã¦ jakiemuÅ“ z tych snobÃ³w, ktÃ³rzy gromadzÂ¹ tego typu historyczne pamiÂ¹tki.
+    AI_Output (other, self ,"DIA_Buddler_USKAN2_15_03"); //WidaÃ¦ nie za dobrze ci poszÂ³o, skoro wylÂ¹dowaÂ³eÅ“ na zesÂ³aniu.
+    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_04"); //Nie przerywaj mi, to ci opowiem. Na czym to ja skoÃ±czyÂ³em? A no tak...
+    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_05"); //Wprawdzie udaÂ³o mi siÃª Å“wisnÂ¹Ã¦ puchar z domu tego piÃªknisia â€“ Valentino, ale wpadÂ³em podczas przeczesywania domu Gerbrandta.
+    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_06"); //ByÂ³em pewien, Â¿e ten krÃªtacz gÂ³Ãªboko Å“pi, a tymczasem wymknÂ¹Â³ siÃª ze swojej rezydencji i zawoÂ³aÂ³ straÂ¿e. MÃ³j dalszy los byÂ³ Â³atwy do przewidzenia. 
+    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_07"); //Ten Gerbrandt sam prowadzi rÃ³Â¿ne ciemne interesy. W Kolonii Karnej jest juÂ¿ jego byÂ³y wspÃ³lnik, ktÃ³ry odwalaÂ³ za niego brudnÂ¹ robotÃª.
+    AI_Output (self, other ,"DIA_Buddler_USKAN2_03_08"); //Tylko czekaÃ¦ i ten obleÅ“ny knur sam wylÂ¹duje w GÃ³rniczej Dolinie, a wtedy nie chciaÂ³bym byÃ¦ na jego miejscu.
 };
 
 //========================================
@@ -93,7 +93,7 @@ INSTANCE DIA_Buddler_USKAN3 (C_INFO)
    condition    = DIA_Buddler_USKAN3_Condition;
    information  = DIA_Buddler_USKAN3_Info;
    permanent	= FALSE;
-   description	= "Kim jest by³y wspó³pracownik Gerbrandta?";
+   description	= "Kim jest byÂ³y wspÃ³Â³pracownik Gerbrandta?";
 };
 
 FUNC INT DIA_Buddler_USKAN3_Condition()
@@ -107,11 +107,11 @@ FUNC INT DIA_Buddler_USKAN3_Condition()
 
 FUNC VOID DIA_Buddler_USKAN3_Info()
 {
-    AI_Output (other, self ,"DIA_Buddler_USKAN3_15_01"); //Kim jest by³y wspó³pracownik Gerbrandta?
-    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_02"); //To Diego – szef Cieni, naprawdê nie wiedzia³eœ? Widaæ Gerbrandt postanowi³ siê pozbyæ swojego wspólnika. 
-    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_03"); //Pewnie wyczu³, ¿e z Diega jest niez³y spryciarz i w sumie siê nie pomyli³, bo ten szczwany lis zdo³a³ siê nieŸle urz¹dzi³ w Kolonii Karnej.
-    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_04"); //Ka¿dy tu niby zaczyna³ z kilofem, ale nie ka¿demu udaje siê zostaæ dowódc¹ Cieni, prawda? 
-    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_05"); //Pomyœl wiêc sobie, co ten bystrzacha przygotowa³ na wypadek, gdyby do Kolonii Karnej mia³ trafiæ goœæ, który go wycycka³. 
+    AI_Output (other, self ,"DIA_Buddler_USKAN3_15_01"); //Kim jest byÂ³y wspÃ³Â³pracownik Gerbrandta?
+    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_02"); //To Diego â€“ szef Cieni, naprawdÃª nie wiedziaÂ³eÅ“? WidaÃ¦ Gerbrandt postanowiÂ³ siÃª pozbyÃ¦ swojego wspÃ³lnika. 
+    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_03"); //Pewnie wyczuÂ³, Â¿e z Diega jest niezÂ³y spryciarz i w sumie siÃª nie pomyliÂ³, bo ten szczwany lis zdoÂ³aÂ³ siÃª nieÅ¸le urzÂ¹dziÂ³ w Kolonii Karnej.
+    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_04"); //KaÂ¿dy tu niby zaczynaÂ³ z kilofem, ale nie kaÂ¿demu udaje siÃª zostaÃ¦ dowÃ³dcÂ¹ Cieni, prawda? 
+    AI_Output (self, other ,"DIA_Buddler_USKAN3_03_05"); //PomyÅ“l wiÃªc sobie, co ten bystrzacha przygotowaÂ³ na wypadek, gdyby do Kolonii Karnej miaÂ³ trafiÃ¦ goÅ“Ã¦, ktÃ³ry go wycyckaÂ³. 
 };
 
 //========================================
@@ -125,7 +125,7 @@ INSTANCE DIA_Buddler_USKAN4 (C_INFO)
    condition    = DIA_Buddler_USKAN4_Condition;
    information  = DIA_Buddler_USKAN4_Info;
    permanent	= FALSE;
-   description	= "Sk¹d nazwa tych kielichów?";
+   description	= "SkÂ¹d nazwa tych kielichÃ³w?";
 };
 
 FUNC INT DIA_Buddler_USKAN4_Condition()
@@ -139,11 +139,11 @@ FUNC INT DIA_Buddler_USKAN4_Condition()
 
 FUNC VOID DIA_Buddler_USKAN4_Info()
 {
-    AI_Output (other, self ,"DIA_Buddler_USKAN4_15_01"); //Sk¹d nazwa tych kielichów?
-    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_02"); //Nazywaj¹ je krwawymi, bo nasz „kochany” król zdoby³ je podczas bardzo krwawej wyprawy, w czasie której straci³ sporo swoich ludzi. 
-    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_03"); //Bra³o w niej udzia³ wielu ¿o³nierzy z Khorinis, wiêc te snoby z Górnego Miasta postanowi³y koniecznie zdobyæ krwawe kielichy.
-    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_04"); //¯e niby jakaœ pami¹tka odwagi mieszkañców Khorinis, ale dla mnie to zwyk³e kielichy, za które bogacze s¹ gotowi solidnie przep³aciæ.
-    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_05"); //Naprawdê trzeba nie wiedzieæ co robiæ ze z³otem, by wydawaæ je na jakieœ sentymentalne starocia.
+    AI_Output (other, self ,"DIA_Buddler_USKAN4_15_01"); //SkÂ¹d nazwa tych kielichÃ³w?
+    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_02"); //NazywajÂ¹ je krwawymi, bo nasz â€kochanyâ€ krÃ³l zdobyÂ³ je podczas bardzo krwawej wyprawy, w czasie ktÃ³rej straciÂ³ sporo swoich ludzi. 
+    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_03"); //BraÂ³o w niej udziaÂ³ wielu Â¿oÂ³nierzy z Khorinis, wiÃªc te snoby z GÃ³rnego Miasta postanowiÂ³y koniecznie zdobyÃ¦ krwawe kielichy.
+    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_04"); //Â¯e niby jakaÅ“ pamiÂ¹tka odwagi mieszkaÃ±cÃ³w Khorinis, ale dla mnie to zwykÂ³e kielichy, za ktÃ³re bogacze sÂ¹ gotowi solidnie przepÂ³aciÃ¦.
+    AI_Output (self, other ,"DIA_Buddler_USKAN4_03_05"); //NaprawdÃª trzeba nie wiedzieÃ¦ co robiÃ¦ ze zÂ³otem, by wydawaÃ¦ je na jakieÅ“ sentymentalne starocia.
 };
 
 //========================================
@@ -156,8 +156,8 @@ INSTANCE DIA_Buddler_USKAN5 (C_INFO)
    nr           = 5;
    condition    = DIA_Buddler_USKAN5_Condition;
    information  = DIA_Buddler_USKAN5_Info;
-   permanent	= FALSE;
-   description	= "Co mo¿esz mi poradziæ?";
+   permanent	= TRUE;
+   description	= "Co moÂ¿esz mi poradziÃ¦?";
 };
 
 FUNC INT DIA_Buddler_USKAN5_Condition()
@@ -170,10 +170,10 @@ FUNC INT DIA_Buddler_USKAN5_Condition()
 
 FUNC VOID DIA_Buddler_USKAN5_Info()
 {
-    AI_Output (other, self ,"DIA_Buddler_USKAN5_15_01"); //Co mo¿esz mi poradziæ?
-    AI_Output (self, other ,"DIA_Buddler_USKAN5_03_02"); //Ten Valentino chowa swoje skarby w skrytce, której mechanizm uruchamia jedna z lamp wisz¹cych na œcianie. Po przekrêceniu lampy, œcianka znika i pojawia siê pomieszczenie z kuferkiem.
-    AI_Output (other, self ,"DIA_Buddler_USKAN5_15_03"); //Z pewnoœci¹ bêdê mia³ okazjê to sprawdziæ.
-    AI_Output (self, other ,"DIA_Buddler_USKAN5_03_04"); //No tak, jesteœmy przecie¿ pod Magiczn¹ Barier¹. Ale prosi³eœ o radê, wiêc masz radê.
+    AI_Output (other, self ,"DIA_Buddler_USKAN5_15_01"); //Co moÂ¿esz mi poradziÃ¦?
+    AI_Output (self, other ,"DIA_Buddler_USKAN5_03_02"); //Ten Valentino chowa swoje skarby w skrytce, ktÃ³rej mechanizm uruchamia jedna z lamp wiszÂ¹cych na Å“cianie. Po przekrÃªceniu lampy, Å“cianka znika i pojawia siÃª pomieszczenie z kuferkiem.
+    AI_Output (other, self ,"DIA_Buddler_USKAN5_15_03"); //Z pewnoÅ“ciÂ¹ bÃªdÃª miaÂ³ okazjÃª to sprawdziÃ¦.
+    AI_Output (self, other ,"DIA_Buddler_USKAN5_03_04"); //No tak, jesteÅ“my przecieÂ¿ pod MagicznÂ¹ BarierÂ¹. Ale prosiÂ³eÅ“ o radÃª, wiÃªc masz radÃª.
 };
 
 //========================================
@@ -186,7 +186,7 @@ INSTANCE DIA_Buddler_USKAN6 (C_INFO)
    nr           = 6;
    condition    = DIA_Buddler_USKAN6_Condition;
    information  = DIA_Buddler_USKAN6_Info;
-   permanent	= FALSE;
+   permanent	= TRUE;
    description	= "Jak leci?";
 };
 
@@ -202,7 +202,7 @@ FUNC INT DIA_Buddler_USKAN6_Condition()
 FUNC VOID DIA_Buddler_USKAN6_Info()
 {
     AI_Output (other, self ,"DIA_Buddler_USKAN6_15_01"); //Jak leci?
-    AI_Output (self, other ,"DIA_Buddler_USKAN6_03_02"); //P³acê Stra¿nikom i cieszê siê spokojem…
+    AI_Output (self, other ,"DIA_Buddler_USKAN6_03_02"); //PÂ³acÃª StraÂ¿nikom i cieszÃª siÃª spokojemâ€¦
 };
 
 //========================================
@@ -216,7 +216,7 @@ INSTANCE DIA_Buddler_USKAN7 (C_INFO)
    condition    = DIA_Buddler_USKAN7_Condition;
    information  = DIA_Buddler_USKAN7_Info;
    permanent	= FALSE;
-   description	= "R¹czka te¿ by³ w Gildii Z³odziei?";
+   description	= "RÂ¹czka teÂ¿ byÂ³ w Gildii ZÂ³odziei?";
 };
 
 FUNC INT DIA_Buddler_USKAN7_Condition()
@@ -230,12 +230,12 @@ FUNC INT DIA_Buddler_USKAN7_Condition()
 
 FUNC VOID DIA_Buddler_USKAN7_Info()
 {
-    AI_Output (other, self ,"DIA_Buddler_USKAN7_15_01"); //R¹czka te¿ by³ w Gildii Z³odziei?
-    AI_Output (self, other ,"DIA_Buddler_USKAN7_03_02"); //Wprawdzie jestem tu od lat, ale kodeks honorowy z³odzieja w dalszym ci¹gu mnie zobowi¹zuje.
+    AI_Output (other, self ,"DIA_Buddler_USKAN7_15_01"); //RÂ¹czka teÂ¿ byÂ³ w Gildii ZÂ³odziei?
+    AI_Output (self, other ,"DIA_Buddler_USKAN7_03_02"); //Wprawdzie jestem tu od lat, ale kodeks honorowy zÂ³odzieja w dalszym ciÂ¹gu mnie zobowiÂ¹zuje.
     AI_Output (other, self ,"DIA_Buddler_USKAN7_15_03"); //No i?
-    AI_Output (self, other ,"DIA_Buddler_USKAN7_03_04"); //Przede wszystkim lojalnoœæ.
-    AI_Output (other, self ,"DIA_Buddler_USKAN7_15_05"); //Czyli jednak R¹czka by³ cz³onkiem Gildii Z³odziei.
-    AI_Output (self, other ,"DIA_Buddler_USKAN7_03_06"); //Wybacz kolego, ale naprawdê nie mogê ci powiedzieæ.
+    AI_Output (self, other ,"DIA_Buddler_USKAN7_03_04"); //Przede wszystkim lojalnoÅ“Ã¦.
+    AI_Output (other, self ,"DIA_Buddler_USKAN7_15_05"); //Czyli jednak RÂ¹czka byÂ³ czÂ³onkiem Gildii ZÂ³odziei.
+    AI_Output (self, other ,"DIA_Buddler_USKAN7_03_06"); //Wybacz kolego, ale naprawdÃª nie mogÃª ci powiedzieÃ¦.
     AI_Output (other, self ,"DIA_Buddler_USKAN7_15_07"); //Jak sobie chcesz.
 };
 
@@ -251,7 +251,7 @@ INSTANCE DIA_Buddler_NIEPOKORNY1USKAN (C_INFO)
    condition    = DIA_Buddler_NIEPOKORNY1USKAN_Condition;
    information  = DIA_Buddler_NIEPOKORNY1USKAN_Info;
    permanent	= FALSE;
-   description	= "Dziœ w nocy trzeba przetrzepaæ skórê Onedowi! (zap³aæ 50 bry³ek)";
+   description	= "DziÅ“ w nocy trzeba przetrzepaÃ¦ skÃ³rÃª Onedowi! (zapÂ³aÃ¦ 50 bryÂ³ek)";
 };
 
 FUNC INT DIA_Buddler_NIEPOKORNY1USKAN_Condition()
@@ -266,12 +266,12 @@ FUNC INT DIA_Buddler_NIEPOKORNY1USKAN_Condition()
 
 FUNC VOID DIA_Buddler_NIEPOKORNY1USKAN_Info()
 {
-    AI_Output (other, self ,"DIA_Buddler_NIEPOKORNY1USKAN_15_01"); //Dziœ w nocy trzeba przetrzepaæ skórê Onedowi! 
+    AI_Output (other, self ,"DIA_Buddler_NIEPOKORNY1USKAN_15_01"); //DziÅ“ w nocy trzeba przetrzepaÃ¦ skÃ³rÃª Onedowi! 
     AI_Output (self, other ,"DIA_Buddler_NIEPOKORNY1USKAN_03_02"); //A to niby czemu?
-    AI_Output (other, self ,"DIA_Buddler_NIEPOKORNY1USKAN_15_03"); //Bo chce nawiaæ. Oczywiœcie gdy mu siê uda ,wszystko spadnie na resztê Kopaczy.
-    AI_Output (self, other ,"DIA_Buddler_NIEPOKORNY1USKAN_03_04"); //Racja, daj parê bry³ek za fatygê i zajmê siê tym.
-    AI_Output (other, self ,"DIA_Buddler_NIEPOKORNY1USKAN_15_05"); //Proszê.
-    B_LogEntry                     (CH1_Niepokorny_Kopacz,"Uscan weŸmie udzia³ w zasadzce na Oneda.");
+    AI_Output (other, self ,"DIA_Buddler_NIEPOKORNY1USKAN_15_03"); //Bo chce nawiaÃ¦. OczywiÅ“cie gdy mu siÃª uda ,wszystko spadnie na resztÃª Kopaczy.
+    AI_Output (self, other ,"DIA_Buddler_NIEPOKORNY1USKAN_03_04"); //Racja, daj parÃª bryÂ³ek za fatygÃª i zajmÃª siÃª tym.
+    AI_Output (other, self ,"DIA_Buddler_NIEPOKORNY1USKAN_15_05"); //ProszÃª.
+    B_LogEntry                     (CH1_Niepokorny_Kopacz,"Uscan weÅ¸mie udziaÂ³ w zasadzce na Oneda.");
     B_GiveInvItems (other, self, ItMiNugget, 50);
 };
 
@@ -286,7 +286,7 @@ INSTANCE DIA_Uscan_Hello (C_INFO)
 	condition	= DIA_Uscan_Hello_Condition;
 	information	= DIA_Uscan_Hello_Info;
 	permanent	= 0;
-	description = "Potrzebujesz mo¿e pomocy?";
+	description = "Potrzebujesz moÂ¿e pomocy?";
 };                       
 
 FUNC INT DIA_Uscan_Hello_Condition()
@@ -296,31 +296,31 @@ FUNC INT DIA_Uscan_Hello_Condition()
 
 FUNC VOID DIA_Uscan_Hello_Info()
 {
-	AI_Output (other, self,"DIA_Uscan_Hello_15_00"); //Potrzebujesz mo¿e pomocy?
-	AI_Output (self, other,"DIA_Uscan_Hello_01_01"); //Móg³byœ mi siê przydaæ. To nie bêdzie trudne zadanie, a jeœli je wykonasz, to dostaniesz parê bry³ek. Zainteresowany?
-	AI_Output (other, self,"DIA_Uscan_Hello_15_02"); //Pewnie, ¿e tak.
-	AI_Output (self, other,"DIA_Uscan_Hello_01_03"); //Zatem pos³uchaj. W obozie znajduje siê Kopacz o imieniu Eskel. Kiedyœ by³ piekarzem w Khorinis...
-	AI_Output (other, self,"DIA_Uscan_Hello_15_04"); //I co w tym takiego niezwyk³ego?
-	AI_Output (self, other,"DIA_Uscan_Hello_01_05"); //Przez tego drania nie mam paru zêbów!
-	AI_Output (other, self,"DIA_Uscan_Hello_15_06"); //Czyli ci je wybi³ i teraz mam mu siê odwdziêczyæ tym samym?
-	AI_Output (self, other,"DIA_Uscan_Hello_01_07"); //Daj mi dokoñczyæ. Kiedy Eskel mia³ z kimœ na pieñku dodawa³ piasek do m¹ki i sprzedawa³ mu tak wypieczony chleb.
-	AI_Output (self, other,"DIA_Uscan_Hello_01_08"); //Potem szczerbaty nieszczêœnik wyklina³ tego trefnego piekarza, a tamten mia³ radochê. Tak by³o te¿ ze mn¹.
-	AI_Output (self, other,"DIA_Uscan_Hello_01_09"); //Czas wyrównaæ z nim rachunki!
-	AI_Output (other, self,"DIA_Uscan_Hello_15_10"); //W jaki sposób?
-	AI_Output (self, other,"DIA_Uscan_Hello_01_11"); //Eskel wykorzystuje swój dawny fach by upiec czasem sobie w³asny chleb.
-	AI_Output (self, other,"DIA_Uscan_Hello_01_12"); //Czas daæ mu posmakowaæ jego ulepszonej wersji.
-	AI_Output (other, self,"DIA_Uscan_Hello_15_13"); //Rozumiem. Mam wiec mu dosypaæ piasku do tej m¹ki, tak?
-	AI_Output (self, other,"DIA_Uscan_Hello_01_14"); //To musi byæ fachowa robota, tak by Eskel siê nie po³apa³. Pójdziesz do Bukharta, on by³ kiedyœ farmerem.
-	AI_Output (self, other,"DIA_Uscan_Hello_01_15"); //Bêdzie wiedzia³ jak dobrze to przygotowaæ, by tamten szubrawiec niczego nie odkry³.
-	AI_Output (other, self,"DIA_Uscan_Hello_15_16"); //Zatem, idê do niego.
-	AI_Output (self, other,"DIA_Uscan_Hello_01_17"); //Zaczekaj. Za¿¹da od ciebie has³a. Brzmi ono "Czerwona Latarnia".
-	AI_Output (other, self,"DIA_Uscan_Hello_15_18"); //Bêdê pamiêta³.
+	AI_Output (other, self,"DIA_Uscan_Hello_15_00"); //Potrzebujesz moÂ¿e pomocy?
+	AI_Output (self, other,"DIA_Uscan_Hello_01_01"); //MÃ³gÂ³byÅ“ mi siÃª przydaÃ¦. To nie bÃªdzie trudne zadanie, a jeÅ“li je wykonasz, to dostaniesz parÃª bryÂ³ek. Zainteresowany?
+	AI_Output (other, self,"DIA_Uscan_Hello_15_02"); //Pewnie, Â¿e tak.
+	AI_Output (self, other,"DIA_Uscan_Hello_01_03"); //Zatem posÂ³uchaj. W obozie znajduje siÃª Kopacz o imieniu Eskel. KiedyÅ“ byÂ³ piekarzem w Khorinis...
+	AI_Output (other, self,"DIA_Uscan_Hello_15_04"); //I co w tym takiego niezwykÂ³ego?
+	AI_Output (self, other,"DIA_Uscan_Hello_01_05"); //Przez tego drania nie mam paru zÃªbÃ³w!
+	AI_Output (other, self,"DIA_Uscan_Hello_15_06"); //Czyli ci je wybiÂ³ i teraz mam mu siÃª odwdziÃªczyÃ¦ tym samym?
+	AI_Output (self, other,"DIA_Uscan_Hello_01_07"); //Daj mi dokoÃ±czyÃ¦. Kiedy Eskel miaÂ³ z kimÅ“ na pieÃ±ku dodawaÂ³ piasek do mÂ¹ki i sprzedawaÂ³ mu tak wypieczony chleb.
+	AI_Output (self, other,"DIA_Uscan_Hello_01_08"); //Potem szczerbaty nieszczÃªÅ“nik wyklinaÂ³ tego trefnego piekarza, a tamten miaÂ³ radochÃª. Tak byÂ³o teÂ¿ ze mnÂ¹.
+	AI_Output (self, other,"DIA_Uscan_Hello_01_09"); //Czas wyrÃ³wnaÃ¦ z nim rachunki!
+	AI_Output (other, self,"DIA_Uscan_Hello_15_10"); //W jaki sposÃ³b?
+	AI_Output (self, other,"DIA_Uscan_Hello_01_11"); //Eskel wykorzystuje swÃ³j dawny fach by upiec czasem sobie wÂ³asny chleb.
+	AI_Output (self, other,"DIA_Uscan_Hello_01_12"); //Czas daÃ¦ mu posmakowaÃ¦ jego ulepszonej wersji.
+	AI_Output (other, self,"DIA_Uscan_Hello_15_13"); //Rozumiem. Mam wiec mu dosypaÃ¦ piasku do tej mÂ¹ki, tak?
+	AI_Output (self, other,"DIA_Uscan_Hello_01_14"); //To musi byÃ¦ fachowa robota, tak by Eskel siÃª nie poÂ³apaÂ³. PÃ³jdziesz do Bukharta, on byÂ³ kiedyÅ“ farmerem.
+	AI_Output (self, other,"DIA_Uscan_Hello_01_15"); //BÃªdzie wiedziaÂ³ jak dobrze to przygotowaÃ¦, by tamten szubrawiec niczego nie odkryÂ³.
+	AI_Output (other, self,"DIA_Uscan_Hello_15_16"); //Zatem, idÃª do niego.
+	AI_Output (self, other,"DIA_Uscan_Hello_01_17"); //Zaczekaj. ZaÂ¿Â¹da od ciebie hasÂ³a. Brzmi ono "Czerwona Latarnia".
+	AI_Output (other, self,"DIA_Uscan_Hello_15_18"); //BÃªdÃª pamiÃªtaÂ³.
 	
 	MIS_WhoeverPoursSand = LOG_RUNNING;
 
    Log_CreateTopic			(CH1_WhoeverPoursSand, LOG_MISSION);
    Log_SetTopicStatus	(CH1_WhoeverPoursSand, LOG_RUNNING);
-	B_LogEntry					(CH1_WhoeverPoursSand, "Kopacz Uscan poprosi³ mnie o pomoc w zemœcie na Eskelu. Eskel dosypa³ kiedyœ Uscanowi piasku do m¹ki i przez to ten teraz nie ma zêbów. Mam siê odwdziêczyæ w imieniu Uscana. W tym celu powianiem pogadaæ z Bukhartem i poprosiæ go o przygotowanie worka z przygotowan¹ m¹k¹.");
+	B_LogEntry					(CH1_WhoeverPoursSand, "Kopacz Uscan poprosiÂ³ mnie o pomoc w zemÅ“cie na Eskelu. Eskel dosypaÂ³ kiedyÅ“ Uscanowi piasku do mÂ¹ki i przez to ten teraz nie ma zÃªbÃ³w. Mam siÃª odwdziÃªczyÃ¦ w imieniu Uscana. W tym celu powianiem pogadaÃ¦ z Bukhartem i poprosiÃ¦ go o przygotowanie worka z przygotowanÂ¹ mÂ¹kÂ¹.");
 };
 
 INSTANCE DIA_Uscan_Flour (C_INFO)
@@ -330,7 +330,7 @@ INSTANCE DIA_Uscan_Flour (C_INFO)
 	condition	= DIA_Uscan_Flour_Condition;
 	information	= DIA_Uscan_Flour_Info;
 	permanent	= 0;
-	description = "Podmieni³em m¹kê.";
+	description = "PodmieniÂ³em mÂ¹kÃª.";
 };                       
 
 FUNC INT DIA_Uscan_Flour_Condition()
@@ -343,15 +343,15 @@ FUNC INT DIA_Uscan_Flour_Condition()
 
 FUNC VOID DIA_Uscan_Flour_Info()
 {
-	AI_Output (other, self,"DIA_Uscan_Flour_15_00"); //Podmieni³em m¹kê.
-	AI_Output (self, other,"DIA_Uscan_Flour_01_01"); //Œwietnie, teraz czekajmy na efekty.
-	AI_Output (other, self,"DIA_Uscan_Flour_15_02"); //A co z moj¹ zap³at¹?
-	AI_Output (self, other,"DIA_Uscan_Flour_01_03"); //A widzisz gdzieœ walaj¹ce siê po ziemi zêby Eskela? Bo ja nie. Dostaniesz rudê jak wszystko wypali.
-	AI_Output (self, other,"DIA_Uscan_Flour_01_04"); //Poczekaj parê dni i miej uszy szeroko otwarte.
+	AI_Output (other, self,"DIA_Uscan_Flour_15_00"); //PodmieniÂ³em mÂ¹kÃª.
+	AI_Output (self, other,"DIA_Uscan_Flour_01_01"); //Å’wietnie, teraz czekajmy na efekty.
+	AI_Output (other, self,"DIA_Uscan_Flour_15_02"); //A co z mojÂ¹ zapÂ³atÂ¹?
+	AI_Output (self, other,"DIA_Uscan_Flour_01_03"); //A widzisz gdzieÅ“ walajÂ¹ce siÃª po ziemi zÃªby Eskela? Bo ja nie. Dostaniesz rudÃª jak wszystko wypali.
+	AI_Output (self, other,"DIA_Uscan_Flour_01_04"); //Poczekaj parÃª dni i miej uszy szeroko otwarte.
 	
 	UscanDay = Wld_GetDay() + 2;
 	
-	B_LogEntry(CH1_WhoeverPoursSand, "Musze poczekaæ parê dni, oczekuj¹c efektów moich dzia³añ.");
+	B_LogEntry(CH1_WhoeverPoursSand, "Musze poczekaÃ¦ parÃª dni, oczekujÂ¹c efektÃ³w moich dziaÂ³aÃ±.");
 };
 
 INSTANCE DIA_Uscan_EskelTeeth (C_INFO)
@@ -361,7 +361,7 @@ INSTANCE DIA_Uscan_EskelTeeth (C_INFO)
 	condition	= DIA_Uscan_EskelTeeth_Condition;
 	information	= DIA_Uscan_EskelTeeth_Info;
 	permanent	= 0;
-	description = "Uzêbienie Eskela dosta³o nale¿n¹ nauczkê.";
+	description = "UzÃªbienie Eskela dostaÂ³o naleÂ¿nÂ¹ nauczkÃª.";
 };                       
 
 FUNC INT DIA_Uscan_EskelTeeth_Condition()
@@ -374,17 +374,17 @@ FUNC INT DIA_Uscan_EskelTeeth_Condition()
 
 FUNC VOID DIA_Uscan_EskelTeeth_Info()
 {
-	AI_Output (other, self,"DIA_Uscan_EskelTeeth_15_00"); //Uzêbienie Eskela dosta³o nale¿n¹ nauczkê.
-	AI_Output (self, other,"DIA_Uscan_EskelTeeth_01_01"); //Wspaniale. Ten drañ teraz poczu³ siê dok³adnie tak Ÿle jak ja kiedyœ. Mam nadzieje, ¿e ta Kolonia nieraz skopie mu jeszcze ty³ek.
-	AI_Output (self, other,"DIA_Uscan_EskelTeeth_01_02"); //A teraz weŸ nale¿n¹ zap³atê.
+	AI_Output (other, self,"DIA_Uscan_EskelTeeth_15_00"); //UzÃªbienie Eskela dostaÂ³o naleÂ¿nÂ¹ nauczkÃª.
+	AI_Output (self, other,"DIA_Uscan_EskelTeeth_01_01"); //Wspaniale. Ten draÃ± teraz poczuÂ³ siÃª dokÂ³adnie tak Å¸le jak ja kiedyÅ“. Mam nadzieje, Â¿e ta Kolonia nieraz skopie mu jeszcze tyÂ³ek.
+	AI_Output (self, other,"DIA_Uscan_EskelTeeth_01_02"); //A teraz weÅ¸ naleÂ¿nÂ¹ zapÂ³atÃª.
 	
 	CreateInvItem(self, ItMiNugget);
 	B_GiveInvItems(self, other, ItMiNugget, 50);
 	
-	AI_Output (other, self,"DIA_Uscan_EskelTeeth_15_03"); //Dziêki.
+	AI_Output (other, self,"DIA_Uscan_EskelTeeth_15_03"); //DziÃªki.
 	
 	MIS_WhoeverPoursSand = LOG_SUCCESS;
 
    Log_SetTopicStatus(CH1_WhoeverPoursSand, LOG_SUCCESS);
-	B_LogEntry(CH1_WhoeverPoursSand, "Otrzyma³em trochê rudy od Uscana. Zadanie wykonane.");
+	B_LogEntry(CH1_WhoeverPoursSand, "OtrzymaÂ³em trochÃª rudy od Uscana. Zadanie wykonane.");
 };
